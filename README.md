@@ -21,6 +21,9 @@ The user will be able to:
 
 https://franco-ortega.github.io/name-title-gen/
 
+#
+
+### Planning:
 
 ![Image of planPart1](./planPart1.png)
 ![Image of planPart2](./planPart2.png)
