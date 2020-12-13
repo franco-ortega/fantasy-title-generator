@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
+    margin: 5px;
+    padding: 5px;
 }
+
 
 body {
     background-color: purple;
@@ -38,10 +41,16 @@ li {
 }
 
 p {
-    border: solid 2px black;
+    border: solid 1px black;
     width: fit-content;
     margin: auto;
 }
+
+/* div {
+    border: dashed 2px pink;
+    width: fit-content;
+    margin: auto;
+} */
 
 main {
     background-color: tan;
