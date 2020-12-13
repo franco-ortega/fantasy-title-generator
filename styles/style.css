@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: purple;
+    color: yellowgreen;
+    font-family: fantasy;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+}
+
+header {
+    background-color: gray;
+    color: black;
+}
+
+h1 {
+    background-color: lightgreen;
+    color: darkcyan;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+ul {
+    background-color: orange;
+    border: dashed 1px darkred;
+    width: fit-content;
+    margin: auto;
+}
+
+li {
+    background-color: silver;
+    border: dotted 1px darkblue;
+}
+
+p {
+    border: solid 2px black;
+    width: fit-content;
+    margin: auto;
+}
+
+main {
+    background-color: tan;
+    color: darkgreen;
+    width: fit-content;
+    margin: auto;
+}
+
+section {
+    background-color: teal;
+    border: solid 1px gold;
+}
+
+span {
+    background-color: limegreen;
+}
+
+input {
+    background-color: skyblue;
+    color: darkolivegreen;
+}
+
+button {
+    background-color: rebeccapurple;
+    color: rosybrown;
+}
+
+form {
+    background-color: orangered;
+}
+
+select {
+    background-color: blueviolet;
+    color: white;
+}
+
+option {
+    background-color: green;
+    color: indigo;
+}
