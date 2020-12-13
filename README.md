@@ -14,3 +14,16 @@ The user will be able to:
 1. Home page
 1. Results page
 1. About Me page
+
+#
+
+### Original Site:
+
+https://franco-ortega.github.io/name-title-gen/
+
+#
+
+### Planning:
+
+![Image of planPart1](./planPart1.png)
+![Image of planPart2](./planPart2.png)
