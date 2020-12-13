@@ -4,6 +4,15 @@
     padding: 5px;
 }
 
+header, section, span {
+    display: flex;
+}
+
+header, section {
+    flex-direction: column;
+    align-items: center;
+}
+
 
 body {
     background-color: purple;
@@ -43,14 +52,7 @@ li {
 p {
     border: solid 1px black;
     width: fit-content;
-    margin: auto;
 }
-
-/* div {
-    border: dashed 2px pink;
-    width: fit-content;
-    margin: auto;
-} */
 
 main {
     background-color: tan;
@@ -66,7 +68,6 @@ section {
 
 span {
     background-color: limegreen;
-    display: flex;
     margin: auto;
 }
 
