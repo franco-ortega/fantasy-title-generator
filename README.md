@@ -20,3 +20,7 @@ The user will be able to:
 ### Original Site:
 
 https://franco-ortega.github.io/name-title-gen/
+
+
+![Image of planPart1](./planPart1.png)
+![Image of planPart2](./planPart2.png)
