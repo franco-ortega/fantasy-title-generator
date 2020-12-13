@@ -66,6 +66,8 @@ section {
 
 span {
     background-color: limegreen;
+    display: flex;
+    margin: auto;
 }
 
 input {
