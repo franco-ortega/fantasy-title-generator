@@ -27,3 +27,18 @@ https://franco-ortega.github.io/name-title-gen/
 
 ![Image of planPart1](./planPart1.png)
 ![Image of planPart2](./planPart2.png)
+
+#
+
+### Steps:
+
+1. Create plan
+1. Set up initial files and folders.
+1. Create initial HTML skeleton
+1. Create initial CSS skin
+1. Instal QUnit for testing.
+    1. npm install --save-dev qunit
+    1. Create test folder and file
+        1. __test __
+            tests.html
+
