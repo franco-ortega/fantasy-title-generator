@@ -41,4 +41,16 @@ https://franco-ortega.github.io/name-title-gen/
     1. Create test folder and file
         1. __test __
             tests.html
-
+1. Add data
+    1. data folder
+        1. data.js
+            1. Adjective arrays
+                1. Colors
+                1. Metals
+                1. Misc
+            1. Noun arrays
+                1. Elements
+                1. Gems
+                1. Seasons
+                1. Misc
+                

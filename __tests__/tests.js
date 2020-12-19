@@ -1,5 +1,11 @@
 const { test } = QUnit;
 import { add, addThree, addString } from './sample-tests.js';
+import { adjectiveGroups, nounGroups, adjectiveOrNounGroup } from '../data/data.js';
+
+const test1 = adjectiveGroups;
+const test2 = nounGroups;
+const test3 = adjectiveOrNounGroup;
+console.log(test1, test2, test3);
 
 // First set of sample tests
 QUnit.module('add', () => {
