@@ -4,6 +4,7 @@
 // Randomly select one list (array of strings) from the collection (array of lists). Then, randomly select one word(string) from the list (array).
 // Two adjectives will be selected this way from the Adjective Collection. Both adjectives can come from the same list. But each adjective must be different.
 // Two nouns will be selected the same way with the same restrictions but from the Noun Collection.
+// getWords() will return an array of two strings.
 //
 // How to do this:
 // 1. Count the length of the Adj Collection array

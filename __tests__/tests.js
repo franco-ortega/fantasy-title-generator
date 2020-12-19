@@ -30,18 +30,15 @@ QUnit.module('Word Selection Tests');
   test('should return a string', function(assert) {
 
     const words = getWords(adjectiveGroups);
-    const wordOne = words[0];
-    const wordTwo = words[1];
-
+  
     let trueOrFalseOne;
-    if(typeof wordOne === 'string') { trueOrFalseOne = true; }
+    if(typeof words[0] === 'string') { trueOrFalseOne = true; }
     else { trueOrFalseOne = false; };
     
     let trueOrFalseTwo;
-    if(typeof wordTwo === 'string') { trueOrFalseTwo = true; }
+    if(typeof words[1] === 'string') { trueOrFalseTwo = true; }
     else { trueOrFalseTwo = false; };
     
     assert.true(trueOrFalseOne);
     assert.true(trueOrFalseTwo);
   });
-
