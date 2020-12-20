@@ -1,6 +1,5 @@
 const { test } = QUnit;
-//import { add, addThree, addString } from './sample-tests.js';
-import { adjectiveGroups, nounGroups, adjectiveOrNounGroup } from '../data/data.js';
+import { adjectiveLists, nounLists, adjectiveOrNounList } from '../data/data.js';
 import { getWords } from '../js/utils.js'
 
 // Word selection tests
@@ -8,28 +7,28 @@ QUnit.module('Word Selection Tests');
 
   test('should return two different adjectives', function(assert) {
 
-    const adjectives = getWords(adjectiveGroups);
+    const adjectives = getWords(adjectiveLists);
 
     assert.notEqual(adjectives[0], adjectives[1]);
   });
 
   test('should return two different nouns', function(assert) {
 
-    const nouns = getWords(nounGroups);
+    const nouns = getWords(nounLists);
 
     assert.notEqual(nouns[0], nouns[1]);
   });
 
   test('should return two different adjectives or nouns', function(assert) {
 
-    const adjectivesOrNouns = getWords(adjectiveOrNounGroup);
+    const adjectivesOrNouns = getWords(adjectiveOrNounList);
 
     assert.notEqual(adjectivesOrNouns[0], adjectivesOrNouns[1]);
   });
 
   test('should return a string', function(assert) {
 
-    const words = getWords(adjectiveGroups);
+    const words = getWords(adjectiveLists);
   
     let trueOrFalseOne;
     if(typeof words[0] === 'string') { trueOrFalseOne = true; }

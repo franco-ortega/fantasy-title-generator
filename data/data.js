@@ -119,12 +119,12 @@ const adjectivesOrNouns = [
 ]
 
 // Collection of all the Adjective groupings
-export const adjectiveGroups = [adjectiveColors, adjectiveMetals, adjectiveMisc];
+export const adjectiveLists = [adjectiveColors, adjectiveMetals, adjectiveMisc];
 
 // Collection of all the Noun groupings
-export const nounGroups = [nounElements, nounGems, nounSeasons, nounMisc];
+export const nounLists = [nounElements, nounGems, nounSeasons, nounMisc];
 
 // Collection of all the Adjective/Noun words
-export const adjectiveOrNounGroup = [adjectivesOrNouns];
+export const adjectiveOrNounList = [adjectivesOrNouns];
 
 

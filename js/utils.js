@@ -29,3 +29,33 @@
 // How to test?
 // Check to see if two strings have been selected
 // Check to see if two strings are not equal
+
+export function getWords(groupOfLists) {
+
+    let numberOfWords;
+    let wordTwo
+
+    // Select the first word
+    const numberOfLists = groupOfLists.length;
+    const listOne = groupOfLists[Math.floor(Math.random() * numberOfLists)];
+
+//console.log(Math.floor(Math.random() * numberOfLists));
+
+    numberOfWords = listOne.length;
+    const wordOne = listOne[(Math.floor(Math.random() * numberOfWords))];
+
+//console.log('Word One: ' + wordOne);
+
+    // Select the second word; must not match first word
+    do {
+        const listTwo = groupOfLists[Math.floor(Math.random() * numberOfLists)];
+        
+        numberOfWords = listTwo.length;
+        wordTwo = listTwo[(Math.floor(Math.random() * numberOfWords))];
+    } while (wordOne === wordTwo);
+
+//console.log('Word Two: ' + wordTwo);
+
+    return [wordOne, wordTwo];
+
+};
