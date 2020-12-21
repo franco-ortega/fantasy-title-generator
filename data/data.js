@@ -55,6 +55,13 @@ const adjectiveMetals = [
     'Golden',
 ];
 
+const adjectiveSeasons = [
+    'Spring',
+    'Summer',
+    'Autumn',
+    'Winter'
+];
+
 const adjectiveMisc = [
     'Wild',
     'Water',
@@ -72,18 +79,11 @@ const nounGems = [
     'Emerald'
 ];
 
-const nounSeasons = [
-    'Spring',
-    'Summer',
-    'Autumn',
-    'Winter'
-];
-
 const nounElements = [
     'Earth',
     'Stone',
     'Air',
-    'Sky,',
+    'Sky',
     'Fire',
     'Water',
     'Falls'
@@ -119,10 +119,10 @@ const adjectivesOrNouns = [
 ]
 
 // Collection of all the Adjective groupings
-export const adjectiveLists = [adjectiveColors, adjectiveMetals, adjectiveMisc];
+export const adjectiveLists = [adjectiveColors, adjectiveMetals, adjectiveSeasons, adjectiveMisc];
 
 // Collection of all the Noun groupings
-export const nounLists = [nounElements, nounGems, nounSeasons, nounMisc];
+export const nounLists = [nounElements, nounGems, nounMisc];
 
 // Collection of all the Adjective/Noun words
 export const adjectiveOrNounList = [adjectivesOrNouns];
