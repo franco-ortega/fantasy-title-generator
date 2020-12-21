@@ -83,9 +83,9 @@ const nounElements = [
     'Earth',
     'Stone',
     'Air',
-    'Sky',
-    'Fire',
-    'Water',
+    'Skies',
+    'Fires',
+    'Waters',
     'Falls'
 ];
 
@@ -112,10 +112,15 @@ const nounMisc = [
 
 // Words that could be used as an Adjective or Noun
 // Don't know yet how to handle these
-const adjectivesOrNouns = [
+const adjectivesOrNounsOne = [
     'Shadow',
     'Thunder',
     'Storm'
+]
+const adjectivesOrNounsTest = [
+    'Misc1',
+    'Misc2',
+    'Misc3'
 ]
 
 // Collection of all the Adjective groupings
@@ -125,6 +130,6 @@ export const adjectiveLists = [adjectiveColors, adjectiveMetals, adjectiveSeason
 export const nounLists = [nounElements, nounGems, nounMisc];
 
 // Collection of all the Adjective/Noun words
-export const adjectiveOrNounList = [adjectivesOrNouns];
+export const adjectiveOrNounList = [adjectivesOrNounsOne, adjectivesOrNounsTest];
 
 

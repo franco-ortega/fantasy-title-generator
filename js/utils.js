@@ -45,17 +45,51 @@ function getOneWord(listOfWords) {
     return randomWord;
 };
 
+
+// Refactor this function so that the lists are different; this will ensure that the words are different too, so that check can be removed
+// Maybe getOneList() has to become getTwoLists(); hmmm....
 export function getWords(groupOfLists) {
     const words = [];
-    
+
+    // Select first list
+    // Select second list
+    // Make sure that second list is different than first list
+        // If not, pick a new second list
+        // If so, move to next step
+    // Select a random list
+    // Select a random word from that list
+    // Select the other list
+    // Select a random word from that list
+
+    const twoLists = [];
+
     do {
-        const list = getOneList(groupOfLists);
-        const word = getOneWord(list);
-        words.push(word);
-        if(words[0] === words[1]) {
-            words.pop();
+        ;
+        twoLists.push(getOneWord(groupOfLists));
+        if(twoLists[0] === twoLists[1]) {
+            twoLists.pop();
         }
-    } while (words.length < 2);
+
+    } while (twoLists.length < 2);
+
+    console.log(twoLists);
+    
+    for (let i = 0; i < twoLists.length; i++) {
+        const oneWord = getOneWord(twoLists[i]);
+        words.push(oneWord);
+    }    
+
+    // console.log(words);
+
+
+    // do {
+    //     const list = getOneList(groupOfLists);
+    //     const word = getOneWord(list);
+    //     words.push(word);
+    //     if(words[0] === words[1]) {
+    //         words.pop();
+    //     }
+    // } while (words.length < 2);
 
     return words;
 };
