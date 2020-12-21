@@ -1,6 +1,6 @@
 const { test } = QUnit;
 import { adjectiveLists, nounLists, adjectiveOrNounList } from '../data/data.js';
-import { getTwoWords, createTitle } from '../js/utils.js';
+import { getTwoWords, getTwoLists, createTitle } from '../js/utils.js';
 
 // Word selection tests
 //
@@ -59,4 +59,19 @@ QUnit.module('Word Selection Tests');
     const actual = createTitle(name, adjectives, nouns);
 console.log(expected)
     assert.equal(actual, expected);
+  });
+
+
+// Array length test
+QUnit.module('Array Length Test');
+
+  test('should return an array with two items', function(assert) {
+
+    const twoListsOne =  getTwoLists(adjectiveLists);
+    const twoListsTwo =  getTwoLists(nounLists);
+    const twoListsThree =  getTwoLists(adjectiveOrNounList);
+
+    assert.equal(twoListsOne.length, 2);
+    assert.equal(twoListsTwo.length, 2);
+    assert.equal(twoListsThree.length, 2);
   });

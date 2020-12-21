@@ -10,7 +10,7 @@ function getOneItem(listOfItems) {
 };
 
 // Get two different arrays from an array of many arrays
-function getTwoLists(groupOfLists) {
+export function getTwoLists(groupOfLists) {
     const twoLists = [];
 
     do {
