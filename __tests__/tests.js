@@ -1,6 +1,7 @@
 const { test } = QUnit;
 import { adjectiveLists, nounLists, adjectiveOrNounList } from '../data/data.js';
-import { getWords } from '../js/utils.js'
+import { getWords } from '../js/utils.js';
+import { createTitle } from '../js/index.js';
 
 // Word selection tests
 //
@@ -57,6 +58,6 @@ QUnit.module('Word Selection Tests');
     const expected = `Lila the ${adjectives[0]} ${nouns[0]} of ${adjectives[1]} ${nouns[1]}`
 
     const actual = createTitle(name, adjectives, nouns);
-
+console.log(expected)
     assert.equal(actual, expected);
   });
