@@ -3,6 +3,7 @@ import { adjectiveLists, nounLists, adjectiveOrNounList } from '../data/data.js'
 import { getWords } from '../js/utils.js'
 
 // Word selection tests
+//
 QUnit.module('Word Selection Tests');
 
   test('should return two different adjectives', function(assert) {
@@ -40,4 +41,22 @@ QUnit.module('Word Selection Tests');
     
     assert.true(trueOrFalseOne);
     assert.true(trueOrFalseTwo);
+  });
+
+
+  // Create a Title
+  //
+  QUnit.module('Create a Title Test');
+
+  test('should take in one name, two adjectives, and two nouns, and return the fantasy title as a string', function(assert) {
+
+    const name = 'Lila';
+    const adjectives = getWords(adjectiveLists);
+    const nouns = getWords(nounLists);
+
+    const expected = `Lila the ${adjectives[0]} ${nouns[0]} of ${adjectives[1]} ${nouns[1]}`
+
+    const actual = createTitle(name, adjectives, nouns);
+
+    assert.equal(actual, expected);
   });
