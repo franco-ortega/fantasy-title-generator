@@ -1,3 +1,10 @@
+import { TITLES } from './constants.js';
+
+function setTitle(title) {
+    const stringyTitle = JSON.stringify(title);
+    localStorage.setItem(TITLES, stringyTitle);
+}
+
 // Get a random item from an array
 function selectRandomItem(items) {
     return items[Math.floor(Math.random() * items.length)];
@@ -51,5 +58,8 @@ export function saveTitle(titleToSave) {
     const titleEntry = {
         title: titleToSave
     }
+
+    setTitle(titleEntry);
+
     return titleEntry;
 };
