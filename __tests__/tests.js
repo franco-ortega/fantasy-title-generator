@@ -1,6 +1,6 @@
 const { test } = QUnit;
 import { adjectiveLists, nounLists, adjectiveOrNounList } from '../data/data.js';
-import { getTwoWords, getTwoLists, createTitle } from '../js/utils.js';
+import { getTwoWords, getTwoLists, createTitle, saveTitle } from '../js/utils.js';
 
 // Word selection tests
 //
@@ -74,4 +74,21 @@ QUnit.module('Array Length Test');
     assert.equal(twoListsOne.length, 2);
     assert.equal(twoListsTwo.length, 2);
     assert.equal(twoListsThree.length, 2);
+  });
+
+  // Create object with title to save to localStorage
+QUnit.module('Create object with title');
+
+  test('should return an object with a title string', function(assert) {
+
+    const title = 'Lila the Silver Feather of Seven Winds';
+
+    const expected = {
+      title: 'Lila the Silver Feather of Seven Winds'
+    };
+
+    const actual = saveTitle(title);
+
+    assert.equal(actual, expected);
+    
   });
