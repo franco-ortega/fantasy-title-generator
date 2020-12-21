@@ -30,32 +30,90 @@
 // Check to see if two strings have been selected
 // Check to see if two strings are not equal
 
+
+function selectRandomItem(items) {
+    return items[Math.floor(Math.random() * items.length)];
+};
+
+function getOneList(groupOfLists) {
+    const randomList = selectRandomItem(groupOfLists);
+    return randomList;
+};
+
+function getOneWord(listOfWords) {
+    const randomWord =selectRandomItem(listOfWords);
+    return randomWord;
+};
+
 export function getWords(groupOfLists) {
+    const words = [];
+    
+    do {
+        const list = getOneList(groupOfLists);
+        const word = getOneWord(list);
+        words.push(word);
+        if(words[0] === words[1]) {
+            words.pop();
+        }
+    } while (words.length < 2);
 
-    let numberOfWords;
-    let wordTwo
+    return words;
+};
 
-    // Select the first word
-    const numberOfLists = groupOfLists.length;
-    const listOne = groupOfLists[Math.floor(Math.random() * numberOfLists)];
 
-//console.log(Math.floor(Math.random() * numberOfLists));
 
-    numberOfWords = listOne.length;
-    const wordOne = listOne[(Math.floor(Math.random() * numberOfWords))];
 
-//console.log('Word One: ' + wordOne);
+
+
+
+
+
+
+
+
+
+
+
 
     // Select the second word; must not match first word
-    do {
-        const listTwo = groupOfLists[Math.floor(Math.random() * numberOfLists)];
+    // const listTwo = groupOfLists[Math.floor(Math.random() * numberOfLists)];
+    
+    // do {
+    //     const listTwo = getOneList(groupOfLists);
+    //     wordTwo = getOneWord(listTwo);
+    // } while (wordOne === wordTwo);
+    
         
-        numberOfWords = listTwo.length;
-        wordTwo = listTwo[(Math.floor(Math.random() * numberOfWords))];
-    } while (wordOne === wordTwo);
+        // numberOfWords = listTwo.length;
+        // wordTwo = listTwo[(Math.floor(Math.random() * numberOfWords))];
 
+    
+    //return [wordOne, wordTwo];
+
+
+
+
+
+    // let numberOfWords;
+    
+    // Select the first word
+    // const numberOfLists = groupOfLists.length;
+    // const listOne = groupOfLists[Math.floor(Math.random() * numberOfLists)];
+    
+    
+    // numberOfWords = listOne.length;
+    // const wordOne = listOne[(Math.floor(Math.random() * numberOfWords))];
+    
+    // let wordTwo
+
+    // const listOne = getOneList(groupOfLists);
+    // const wordOne = getOneWord(listOne);
+    
+    // const listTwo = getOneList(groupOfLists);
+    // const wordTwo = getOneWord(listTwo);
+
+
+
+//console.log(Math.floor(Math.random() * numberOfLists));
+//console.log('Word One: ' + wordOne);
 //console.log('Word Two: ' + wordTwo);
-
-    return [wordOne, wordTwo];
-
-};
