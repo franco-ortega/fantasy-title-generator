@@ -1,7 +1,6 @@
 const { test } = QUnit;
 import { adjectiveLists, nounLists, adjectiveOrNounList } from '../data/data.js';
-import { getWords } from '../js/utils.js';
-import { createTitle } from '../js/index.js';
+import { getWords, createTitle } from '../js/utils.js';
 
 // Word selection tests
 //

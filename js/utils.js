@@ -60,6 +60,15 @@ export function getWords(groupOfLists) {
     return words;
 };
 
+export function createTitle(name, adjectives, nouns) {
+    const firstAdjective = adjectives[0];
+    const firstNoun = nouns[0];
+    const secondAdjective = adjectives[1];
+    const secondNoun = nouns[1];
+    
+    return `${name} the ${firstAdjective} ${firstNoun} of ${secondAdjective} ${secondNoun}`;
+};
+
 
 
 
