@@ -35,15 +35,29 @@ function selectRandomItem(items) {
     return items[Math.floor(Math.random() * items.length)];
 };
 
-function getOneList(groupOfLists) {
-    const randomList = selectRandomItem(groupOfLists);
-    return randomList;
-};
+// function getOneList(groupOfLists) {
+//     const randomList = selectRandomItem(groupOfLists);
+//     return randomList;
+// };
 
 function getOneWord(listOfWords) {
     const randomWord =selectRandomItem(listOfWords);
     return randomWord;
 };
+
+function getTwoLists(groupOfLists) {
+    const twoLists = [];
+
+    do {
+        twoLists.push(getOneWord(groupOfLists));
+        if(twoLists[0] === twoLists[1]) {
+            twoLists.pop();
+        };
+    } while (twoLists.length < 2);
+
+    return twoLists
+
+}
 
 
 // Refactor this function so that the lists are different; this will ensure that the words are different too, so that check can be removed
@@ -51,45 +65,13 @@ function getOneWord(listOfWords) {
 export function getWords(groupOfLists) {
     const words = [];
 
-    // Select first list
-    // Select second list
-    // Make sure that second list is different than first list
-        // If not, pick a new second list
-        // If so, move to next step
-    // Select a random list
-    // Select a random word from that list
-    // Select the other list
-    // Select a random word from that list
-
-    const twoLists = [];
-
-    do {
-        ;
-        twoLists.push(getOneWord(groupOfLists));
-        if(twoLists[0] === twoLists[1]) {
-            twoLists.pop();
-        }
-
-    } while (twoLists.length < 2);
-
-    console.log(twoLists);
-    
-    for (let i = 0; i < twoLists.length; i++) {
-        const oneWord = getOneWord(twoLists[i]);
+    const lists = getTwoLists(groupOfLists)
+        
+    for (let i = 0; i < lists.length; i++) {
+        const oneWord = getOneWord(lists[i]);
         words.push(oneWord);
-    }    
-
-    // console.log(words);
-
-
-    // do {
-    //     const list = getOneList(groupOfLists);
-    //     const word = getOneWord(list);
-    //     words.push(word);
-    //     if(words[0] === words[1]) {
-    //         words.pop();
-    //     }
-    // } while (words.length < 2);
+    };
+    console.log(words);
 
     return words;
 };
@@ -114,6 +96,29 @@ export function createTitle(name, adjectives, nouns) {
 
 
 
+
+    // Select first list
+    // Select second list
+    // Make sure that second list is different than first list
+        // If not, pick a new second list
+        // If so, move to next step
+    // Select a random list
+    // Select a random word from that list
+    // Select the other list
+    // Select a random word from that list
+
+
+        // console.log(words);
+
+
+    // do {
+    //     const list = getOneList(groupOfLists);
+    //     const word = getOneWord(list);
+    //     words.push(word);
+    //     if(words[0] === words[1]) {
+    //         words.pop();
+    //     }
+    // } while (words.length < 2);
 
 
 
