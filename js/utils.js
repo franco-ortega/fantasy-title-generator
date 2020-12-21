@@ -35,40 +35,32 @@ function selectRandomItem(items) {
     return items[Math.floor(Math.random() * items.length)];
 };
 
-// function getOneList(groupOfLists) {
-//     const randomList = selectRandomItem(groupOfLists);
-//     return randomList;
-// };
-
-function getOneWord(listOfWords) {
-    const randomWord =selectRandomItem(listOfWords);
-    return randomWord;
+function getOneItem(listOfItems) {
+    const randomItem = selectRandomItem(listOfItems);
+    return randomItem;
 };
 
 function getTwoLists(groupOfLists) {
     const twoLists = [];
 
     do {
-        twoLists.push(getOneWord(groupOfLists));
+        twoLists.push(getOneItem(groupOfLists));
         if(twoLists[0] === twoLists[1]) {
             twoLists.pop();
         };
     } while (twoLists.length < 2);
 
     return twoLists
+};
 
-}
 
-
-// Refactor this function so that the lists are different; this will ensure that the words are different too, so that check can be removed
-// Maybe getOneList() has to become getTwoLists(); hmmm....
 export function getWords(groupOfLists) {
     const words = [];
 
     const lists = getTwoLists(groupOfLists)
         
     for (let i = 0; i < lists.length; i++) {
-        const oneWord = getOneWord(lists[i]);
+        const oneWord = getOneItem(lists[i]);
         words.push(oneWord);
     };
     console.log(words);
@@ -94,8 +86,15 @@ export function createTitle(name, adjectives, nouns) {
 
 
 
+// function getOneList(groupOfLists) {
+//     const randomList = selectRandomItem(groupOfLists);
+//     return randomList;
+// };
 
 
+
+// Refactor this function so that the lists are different; this will ensure that the words are different too, so that check can be removed
+// Maybe getOneList() has to become getTwoLists(); hmmm....
 
     // Select first list
     // Select second list
