@@ -89,6 +89,6 @@ QUnit.module('Create object with title');
 
     const actual = saveTitle(title);
 
-    assert.equal(actual, expected);
+    assert.deepEqual(actual, expected);
     
   });

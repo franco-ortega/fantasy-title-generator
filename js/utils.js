@@ -46,3 +46,10 @@ export function createTitle(name, adjectives, nouns) {
     
     return `${name} the ${firstAdjective} ${firstNoun} of ${secondAdjective} ${secondNoun}`;
 };
+
+export function saveTitle(titleToSave) {
+    const titleEntry = {
+        title: titleToSave
+    }
+    return titleEntry;
+};
