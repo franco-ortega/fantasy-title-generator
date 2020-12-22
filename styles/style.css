@@ -50,14 +50,14 @@ li {
 }
 
 p {
-    border: solid 1px black;
+    /* border: solid 1px black; */
     width: fit-content;
 }
 
 main {
     background-color: tan;
     color: darkgreen;
-    width: fit-content;
+    width: 80vw;
     margin: auto;
 }
 
@@ -67,7 +67,7 @@ section {
 }
 
 span {
-    background-color: limegreen;
+    /* background-color: limegreen; */
     margin: auto;
 }
 
