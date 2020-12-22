@@ -9,7 +9,7 @@ for(let i = 0; i < allTitles.length; i++) {
     const oneTitle = allTitles[i];
 
     const titleHolder = document.createElement('div');
-    titleHolder.textContent = oneTitle;
+    titleHolder.textContent = `* ${oneTitle} *`;
 
     displayCase.appendChild(titleHolder);
 };
