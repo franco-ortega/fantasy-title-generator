@@ -3,13 +3,13 @@ import { TITLES } from './constants.js';
 
 const displayCase = document.getElementById('display-case');
 
-const yourTitles = getTitles(TITLES);
+const allTitles = getTitles(TITLES);
 
-for(let i = 0; i < yourTitles.length; i++) {
-    const oneTitle = yourTitles[i];
-    // console.log(oneTitle);
-    const titleBlock = document.createElement('div');
-    titleBlock.textContent = oneTitle;
-    console.log(titleBlock);
-    displayCase.appendChild(titleBlock);
+for(let i = 0; i < allTitles.length; i++) {
+    const oneTitle = allTitles[i];
+
+    const titleHolder = document.createElement('div');
+    titleHolder.textContent = oneTitle;
+
+    displayCase.appendChild(titleHolder);
 };
