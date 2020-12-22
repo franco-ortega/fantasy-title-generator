@@ -26,6 +26,7 @@ body {
 header {
     background-color: gray;
     color: black;
+    /* width: ; */
 }
 
 h1 {
@@ -39,14 +40,14 @@ ol, ul {
 
 ul {
     background-color: orange;
-    border: dashed 1px darkred;
+    /* border: dashed 1px darkred; */
     width: fit-content;
     margin: auto;
 }
 
 li {
     background-color: silver;
-    border: dotted 1px darkblue;
+    border: solid 1px darkblue;
 }
 
 p {
@@ -93,4 +94,14 @@ select {
 option {
     background-color: green;
     color: indigo;
+}
+
+@media (min-width: 500px) {
+    body {
+        width: 75vw;
+    }
+
+    main {
+        width: 50vw;
+    }
 }
