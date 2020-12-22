@@ -1,9 +1,14 @@
 import { TITLES } from './constants.js';
 
-function setTitle(title) {
-    const stringyTitle = JSON.stringify(title);
-    localStorage.setItem(TITLES, stringyTitle);
-}
+function setTitles(key, value) {
+    const stringyTitles = JSON.stringify(value);
+    localStorage.setItem(key, stringyTitles);
+};
+
+function getTitles() {
+    const stringyTitles = localStorage.getItem(TITLES);
+    return JSON.parse(stringyTitles);
+};
 
 // Get a random item from an array
 function selectRandomItem(items) {
@@ -55,11 +60,11 @@ export function createTitle(name, adjectives, nouns) {
 };
 
 export function saveTitle(titleToSave) {
-    const titleEntry = {
-        title: titleToSave
-    }
+    const localStorageTitles = getTitles(TITLES) || [];
 
-    setTitle(titleEntry);
+    localStorageTitles.push(titleToSave);
+
+    setTitles(TITLES, localStorageTitles);
 
     return titleEntry;
 };

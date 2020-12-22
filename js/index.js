@@ -1,5 +1,5 @@
 import { adjectiveLists, nounLists, adjectiveOrNounList } from '../data/data.js';
-import { getTwoWords, createTitle } from '../js/utils.js'
+import { getTwoWords, createTitle, saveTitle } from '../js/utils.js'
 
 const titleSpan = document.querySelector('.span-title');
 const titleButton = document.querySelector('.button-title');
@@ -13,6 +13,8 @@ titleButton.addEventListener('click', () => {
     const nouns = getTwoWords(nounLists);
 
     const title = createTitle(name, adjectives, nouns);
+
+    saveTitle(title);
 
     titleSpan.textContent = title;
 });
