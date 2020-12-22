@@ -76,18 +76,21 @@ QUnit.module('Array Length Test');
     assert.equal(twoListsThree.length, 2);
   });
 
-  // Create object with title to save to localStorage
-QUnit.module('Create object with title');
+// Place a Title in localStorage
+QUnit.module('Place a Title in localStorage');
 
-  test('should return an object with a title string', function(assert) {
+  test('should place a Title string in an array and save it to localStorage', function(assert) {
 
     const title = 'Lila the Silver Feather of Seven Winds';
+    const TESTS = 'TESTS'
+    
+    localStorage.removeItem(TESTS);
 
-    const expected = {
-      title: 'Lila the Silver Feather of Seven Winds'
-    };
+    saveTitle(title, TESTS);
 
-    const actual = saveTitle(title);
+    const expected = ['Lila the Silver Feather of Seven Winds'];
+
+    const actual = JSON.parse(localStorage.getItem(TESTS));
 
     assert.deepEqual(actual, expected);
     

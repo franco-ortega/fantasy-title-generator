@@ -1,12 +1,12 @@
-import { TITLES } from './constants.js';
+
 
 function setTitles(key, value) {
     const stringyTitles = JSON.stringify(value);
     localStorage.setItem(key, stringyTitles);
 };
 
-function getTitles() {
-    const stringyTitles = localStorage.getItem(TITLES);
+export function getTitles(key) {
+    const stringyTitles = localStorage.getItem(key);
     return JSON.parse(stringyTitles);
 };
 
@@ -59,12 +59,11 @@ export function createTitle(name, adjectives, nouns) {
     return `${name} the ${firstAdjective} ${firstNoun} of ${secondAdjective} ${secondNoun}`;
 };
 
-export function saveTitle(titleToSave) {
-    const localStorageTitles = getTitles(TITLES) || [];
+export function saveTitle(titleToSave, key) {
+    const localStorageTitles = getTitles(key) || [];
 
     localStorageTitles.push(titleToSave);
 
-    setTitles(TITLES, localStorageTitles);
+    setTitles(key, localStorageTitles);
 
-    return titleEntry;
 };
