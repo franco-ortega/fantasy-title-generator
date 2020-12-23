@@ -8,3 +8,14 @@
         width: 50vw;
     }
 }
+
+/* main {
+    border: solid 2px black;
+    height: 100%;
+} */
+
+div {
+    /* border: solid black; */
+    padding: auto;
+    margin: auto;
+}

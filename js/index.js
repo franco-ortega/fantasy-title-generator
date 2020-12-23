@@ -7,6 +7,14 @@ const titleButton = document.querySelector('.button-title');
 const nameInput = document.querySelector('.input-name');
 
 titleButton.addEventListener('click', () => {
+    const oldDiv = document.querySelector('.div-title');
+    if(oldDiv) {
+        oldDiv.remove();
+    };
+    
+    const spanDiv = document.createElement('div');
+    spanDiv.classList.add('div-title');
+
     const name = nameInput.value;
 
     const adjectives = getTwoWords(adjectiveLists);
@@ -17,5 +25,9 @@ titleButton.addEventListener('click', () => {
 
     saveTitle(title, TITLES);
 
-    titleSpan.textContent = title;
+    // titleSpan.textContent = title;
+    spanDiv.classList.add('fade-in');
+    // spanDiv.classList.add('fade-in-down');
+    spanDiv.textContent = title;
+    titleSpan.appendChild(spanDiv);
 });

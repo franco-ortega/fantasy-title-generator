@@ -105,3 +105,70 @@ option {
         width: 50vw;
     }
 }
+
+
+
+
+
+.fade-in {
+    animation: fadeIn ease 1s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 1s;
+    -o-animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.fade-in-down {
+    animation: fadeInDown ease 1s;
+    -webkit-animation: fadeInDown ease 3s;
+    -moz-animation: fadeInDown ease 1s;
+    -o-animation: fadeInDown ease 1s;
+}
+
+
+@keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(30px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ }
