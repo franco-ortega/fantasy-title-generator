@@ -1,0 +1,18 @@
+main {
+    font-size: large;
+}
+
+div {
+    padding: auto;
+    margin: auto;
+}
+
+@media (min-width: 500px) {
+    body {
+        width: 75vw;
+    }
+
+    main {
+        width: 50vw;
+    }
+}

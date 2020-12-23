@@ -1,19 +1,7 @@
+/* Classes for the Title */
 .section-title {
     color: mediumaquamarine;
-}
-
-.section-land {
-    color: mediumblue;
-}
-
-.span-title {
-    color: lightgrey;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.span-land {
-    color: midnightblue;
-    font-family: Arial, Helvetica, sans-serif;
+    height: 40vh;
 }
 
 .input-name {
@@ -24,11 +12,18 @@
     font-style: italic;
 }
 
-.button-land {
-    font-weight: bold;
+.title-display {
+    font-size: larger;
+    color: gold;
 }
 
-.form-name {
+
+/* Classes for the land */
+/* .section-land {
+    color: mediumblue;
+}
+
+.form-land {
     border: solid 2px lawngreen;
 }
 
@@ -36,10 +31,11 @@
     border: dashed 5px darkslategray;
 }
 
-
-
-
-
-.div-title {
-    background-color: tan;
+.button-land {
+    font-weight: bold;
 }
+
+.span-land {
+    color: midnightblue;
+    font-family: Arial, Helvetica, sans-serif;
+} */

@@ -67,11 +67,6 @@ section {
     border: solid 1px gold;
 }
 
-span {
-    /* background-color: limegreen; */
-    margin: auto;
-}
-
 input {
     background-color: skyblue;
     color: darkolivegreen;
@@ -154,7 +149,7 @@ option {
 }
 
 
-.fade-in-down {
+/* .fade-in-down {
     animation: fadeInDown ease 1s;
     -webkit-animation: fadeInDown ease 3s;
     -moz-animation: fadeInDown ease 1s;
@@ -171,4 +166,4 @@ option {
        opacity: 1;
        transform: translateY(0);
     }
- }
+ } */
