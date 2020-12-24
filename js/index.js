@@ -11,8 +11,7 @@ titleButton.disabled = true;
 nameInput.addEventListener('keyup', () => {
     if(nameInput.value.length) {
         titleButton.disabled = false;
-    }
-    if(!nameInput.value.length) {
+    } else {
         titleButton.disabled = true;
     }
 })
