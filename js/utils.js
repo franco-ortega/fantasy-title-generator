@@ -1,6 +1,6 @@
 
 
-function setTitles(key, value) {
+export function setTitles(key, value) {
     const stringyTitles = JSON.stringify(value);
     localStorage.setItem(key, stringyTitles);
 };
