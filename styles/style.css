@@ -26,7 +26,7 @@ body {
 header {
     background-color: gray;
     color: black;
-    /* width: ; */
+    border-radius: 10px;
 }
 
 h1 {
@@ -37,6 +37,8 @@ h1 {
 h2 {
     background-color: lightgreen;
     color: darkcyan;
+    width: 75vw;
+    border-radius: 10px;
 }
 
 ol, ul {
@@ -65,16 +67,19 @@ main {
     color: darkgreen;
     width: 80vw;
     margin: auto;
+    border-radius: 10px;
 }
 
 section {
     background-color: teal;
     border: solid 1px gold;
+    border-radius: 10px;
 }
 
 input {
     background-color: skyblue;
     color: darkolivegreen;
+    
 }
 
 button {
