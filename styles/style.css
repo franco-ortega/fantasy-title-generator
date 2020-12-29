@@ -34,6 +34,11 @@ h1 {
     color: darkcyan;
 }
 
+h2 {
+    background-color: lightgreen;
+    color: darkcyan;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -91,6 +96,11 @@ option {
     color: indigo;
 }
 
+#links-desktop {
+    display: none;
+}
+
+
 @media (min-width: 500px) {
     body {
         width: 75vw;
@@ -99,6 +109,16 @@ option {
     main {
         width: 50vw;
     }
+
+    #links-mobile {
+        display: none;
+    }
+    
+
+    #links-desktop {
+        display: block;
+    }
+    
 }
 
 

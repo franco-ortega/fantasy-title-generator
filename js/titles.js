@@ -2,8 +2,7 @@ import { getTitles, setTitles } from './utils.js';
 import { TITLES } from './constants.js';
 
 const displayCase = document.getElementById('display-case');
-// const container = document.createElement('div');
-// displayCase.appendChild(container);
+// displayCase.setAttribute('class', 'fade-out');
 
 const allTitles = getTitles(TITLES);
 
@@ -11,31 +10,41 @@ for(let i = 0; i < allTitles.length; i++) {
     const oneTitle = allTitles[i];
 
     setTimeout(() => {
-        const deleteButton = document.createElement('button');
+        const titleBox = document.createElement('div');
+        titleBox.setAttribute('id', 'title-box');
+
         const titleHolder = document.createElement('div');
-
+        titleHolder.setAttribute('id', 'title-holder');
         titleHolder.classList.add('fade-in');
-        // titleHolder.classList.add('fade-in-down');
         titleHolder.textContent = `*${oneTitle}*`;
+        // titleHolder.classList.add('fade-in-down');
 
+        // const deleteHolder = document.createElement('div');
+        const deleteButton = document.createElement('button');
+        deleteButton.setAttribute('id', 'delete-button');
         deleteButton.textContent = 'Delete';
 
         deleteButton.addEventListener('click', () => {
+            titleHolder.remove();
+
             const currentTitles = getTitles(TITLES);
-
-            console.log('Delete button was clicked.');
-            console.log(titleHolder);
-            // titleHolder.remove();
-            titleHolder.textContent = 'deleted';
-
-            const oneLessTitle = currentTitles.filter(title => title !== oneTitle);
-
-            setTitles(TITLES, oneLessTitle);
-
+            const editedTitles = currentTitles.filter(title => title !== oneTitle);
+            setTitles(TITLES, editedTitles);
         })
 
-        titleHolder.appendChild(deleteButton);
+    
+        // deleteHolder.appendChild(deleteButton);
+        // titleHolder.appendChild(deleteButton);
         
-        displayCase.appendChild(titleHolder);
+        titleBox.append(titleHolder, deleteButton);
+        displayCase.appendChild(titleBox);
     }, 200 * i);
+
 };
+
+// setTimeout(() => {
+//     displayCase.setAttribute('id', 'scroll');
+//     displayCase.setAttribute('class', 'fade-in');
+    
+    
+// }, 2000);
