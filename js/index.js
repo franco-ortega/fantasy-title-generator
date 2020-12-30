@@ -25,6 +25,7 @@ titleButton.addEventListener('click', () => {
     
     const titleContainer = document.createElement('span');
     titleContainer.classList.add('span-title');
+    // titleContainer.classList.add('fade-in');
     
     const name = nameInput.value;
     const adjectives = getTwoWords(adjectiveLists);
@@ -34,8 +35,8 @@ titleButton.addEventListener('click', () => {
     saveTitle(title, TITLES);
 
     titleDisplayCase.classList.remove('hide');
+    titleDisplayCase.classList.add('fade-in');
 
-    titleContainer.classList.add('fade-in');
     titleContainer.textContent = title;
     titleDisplayCase.appendChild(titleContainer);
 
