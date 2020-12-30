@@ -12,6 +12,7 @@ for(let i = 0; i < allTitles.length; i++) {
     setTimeout(() => {
         const titleBox = document.createElement('div');
         titleBox.setAttribute('id', 'title-box');
+        titleBox.classList.add('fade-in');
 
         const titleHolder = document.createElement('div');
         titleHolder.setAttribute('id', 'title-holder');
@@ -22,6 +23,7 @@ for(let i = 0; i < allTitles.length; i++) {
         // const deleteHolder = document.createElement('div');
         const deleteButton = document.createElement('button');
         deleteButton.setAttribute('id', 'delete-button');
+        deleteButton.classList.add('fade-in');
         deleteButton.textContent = 'Delete';
 
         deleteButton.addEventListener('click', () => {
@@ -33,7 +35,7 @@ for(let i = 0; i < allTitles.length; i++) {
 
         titleBox.append(titleHolder, deleteButton);
         displayCase.appendChild(titleBox);
-    }, 200 * i);
+    }, 500 * i);
 
 };
 
