@@ -4,11 +4,6 @@ main {
     font-size: large;
 }
 
-/* div {
-    padding: auto;
-    margin: auto;
-} */
-
 #links-box {
     margin-bottom: 0;
 }
@@ -23,18 +18,16 @@ main {
 }
 
 #display-case {
-    /* border: solid 2px red; */
-    background-color: purple;
+    /* background-color: purple; */
     padding: auto;
     margin: auto;
-    
 }
 
 
 #title-holder {
     /* border: solid 2px lightskyblue; */
-    padding: auto;
-    margin: auto;
+    /* padding: auto;
+    margin: auto; */
 }
 
 #delete-button {
@@ -47,7 +40,7 @@ main {
 }
 
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
     body {
         width: 75vw;
     }
@@ -55,8 +48,18 @@ main {
     main {
         width: 50vw;
     }
+
+    #title-box {
+        width: 40vw;
+    }
 }
 
+
+
+/* div {
+    padding: auto;
+    margin: auto;
+} */
 
 
 

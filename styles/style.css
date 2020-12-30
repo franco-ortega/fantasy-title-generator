@@ -78,6 +78,7 @@ section {
     background-color: teal;
     border: solid 1px gold;
     border-radius: 10px;
+    height: 40vh;
 }
 
 input {
@@ -86,7 +87,7 @@ input {
 }
 
 button {
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
     color: rosybrown;
 }
 

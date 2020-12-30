@@ -9,7 +9,10 @@
 }
 
 .button-title {
-    font-style: italic;
+    background-color: purple;
+    color: mediumaquamarine;
+    border-radius: 20px;
+    border: solid 5px blueviolet;
 }
 
 .title-display {
