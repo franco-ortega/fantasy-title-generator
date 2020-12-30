@@ -25,17 +25,12 @@ for(let i = 0; i < allTitles.length; i++) {
         deleteButton.textContent = 'Delete';
 
         deleteButton.addEventListener('click', () => {
-            titleHolder.remove();
-
+            titleBox.remove();
             const currentTitles = getTitles(TITLES);
             const editedTitles = currentTitles.filter(title => title !== oneTitle);
             setTitles(TITLES, editedTitles);
         })
 
-    
-        // deleteHolder.appendChild(deleteButton);
-        // titleHolder.appendChild(deleteButton);
-        
         titleBox.append(titleHolder, deleteButton);
         displayCase.appendChild(titleBox);
     }, 200 * i);
