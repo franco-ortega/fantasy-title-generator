@@ -13,7 +13,6 @@ header, section {
     align-items: center;
 }
 
-
 body {
     background-color: purple;
     color: yellowgreen;
@@ -24,8 +23,9 @@ body {
 }
 
 header {
-    background-color: gray;
+    /* background-color: gray; */
     color: black;
+    margin: auto;
     border-radius: 10px;
 }
 
@@ -57,6 +57,18 @@ li {
     border: solid 1px darkblue;
 }
 
+#links-box {
+    background-color: orange;
+    border: solid 1px blue;
+    border-radius: 10px;
+}
+
+#links-mobile {
+    background-color: silver;
+    border: solid 1px blue;
+    border-radius: 10px;
+}
+
 p {
     /* border: solid 1px black; */
     width: fit-content;
@@ -67,6 +79,7 @@ main {
     color: darkgreen;
     width: 80vw;
     margin: auto;
+    margin-top: 5px;
     border-radius: 10px;
 }
 
@@ -79,7 +92,6 @@ section {
 input {
     background-color: skyblue;
     color: darkolivegreen;
-    
 }
 
 button {
@@ -107,17 +119,21 @@ option {
 
 
 @media (min-width: 500px) {
-    body {
-        width: 75vw;
+    header {
+        width: 50vw;
+    }
+
+    h2 {
+        width: 45vw;
     }
 
     main {
         width: 50vw;
     }
 
-    #links-mobile {
+    /* #links-box, #links-mobile {
         display: none;
-    }
+    } */
     
 
     #links-desktop {

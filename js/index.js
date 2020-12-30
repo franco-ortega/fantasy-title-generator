@@ -9,6 +9,7 @@ const nameInput = document.querySelector('.input-name');
 titleButton.disabled = true;
 
 nameInput.addEventListener('keyup', () => {
+    titleDisplayCase.classList.add('hide');
     if(nameInput.value.length) {
         titleButton.disabled = false;
     } else {
@@ -31,6 +32,8 @@ titleButton.addEventListener('click', () => {
     const title = createTitle(name, adjectives, nouns);
 
     saveTitle(title, TITLES);
+
+    titleDisplayCase.classList.remove('hide');
 
     titleContainer.classList.add('fade-in');
     titleContainer.textContent = title;

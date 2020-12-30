@@ -1,37 +1,50 @@
 main {
     background-color: purple;
-    color: silver;
+    color: gold;
     font-size: large;
 }
 
-div {
+/* div {
     padding: auto;
     margin: auto;
+} */
+
+#links-box {
+    margin-bottom: 0;
 }
 
 #title-box {
-    /* border: dashed 4px white; */
+    background-color: darkslateblue;
+    padding: auto;
+    margin: auto;
+    margin-bottom: 10px;
+    border: solid 1px white;
+    border-radius: 10px;
 }
 
 #display-case {
     /* border: solid 2px red; */
     background-color: purple;
+    padding: auto;
+    margin: auto;
+    
 }
 
 
 #title-holder {
     /* border: solid 2px lightskyblue; */
+    padding: auto;
+    margin: auto;
 }
 
 #delete-button {
-    background-color: gold;
-    color: purple;
+    background-color: silver;
+    color: rebeccapurple;
     border-radius: 20px;
     margin-top: -2px;
     padding-top: -2px;
-    border: yellowgreen solid 5px;
+    border: lightslategray solid 5px;
 }
-
 
 
 @media (min-width: 500px) {
