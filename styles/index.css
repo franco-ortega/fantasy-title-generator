@@ -1,7 +1,7 @@
 /* Classes for the Title */
 .section-title {
-    color: mediumaquamarine;
-    height: 50vh;
+    color: aquamarine;
+    height: 25vh;
 }
 
 .input-name {
@@ -13,8 +13,16 @@
 }
 
 .title-display {
-    font-size: larger;
+    background-color: darkslateblue;
     color: gold;
+    font-size: larger;
+    margin-top: 5vh;
+    border: solid 1px white;
+    border-radius: 10px;
+}
+
+.hide {
+    display: none;
 }
 
 

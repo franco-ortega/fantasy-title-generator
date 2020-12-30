@@ -1,0 +1,23 @@
+body {
+    background-color: tan;
+    /* border-top: solid 25px purple;
+    border-left: solid 25px purple;
+    border-right: solid 25px purple;
+    height: 100vh; */
+    /* font-size: larger; */
+}
+
+div {
+    padding: auto;
+    margin: auto;
+}
+
+@media (min-width: 500px) {
+    body {
+        width: 75vw;
+    }
+
+    main {
+        width: 50vw;
+    }
+}

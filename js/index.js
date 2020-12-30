@@ -6,7 +6,18 @@ const titleDisplayCase = document.querySelector('.title-display');
 const titleButton = document.querySelector('.button-title');
 const nameInput = document.querySelector('.input-name');
 
-titleButton.addEventListener('click', () => {    
+titleButton.disabled = true;
+
+nameInput.addEventListener('keyup', () => {
+    titleDisplayCase.classList.add('hide');
+    if(nameInput.value.length) {
+        titleButton.disabled = false;
+    } else {
+        titleButton.disabled = true;
+    }
+})
+
+titleButton.addEventListener('click', () => {
     const oldContainer = document.querySelector('.span-title');
     if(oldContainer) {
         oldContainer.remove();
@@ -22,7 +33,12 @@ titleButton.addEventListener('click', () => {
 
     saveTitle(title, TITLES);
 
+    titleDisplayCase.classList.remove('hide');
+
     titleContainer.classList.add('fade-in');
     titleContainer.textContent = title;
     titleDisplayCase.appendChild(titleContainer);
+
+    nameInput.value = '';
+    titleButton.disabled = true;
 });
