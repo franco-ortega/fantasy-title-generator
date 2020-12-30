@@ -1,7 +1,7 @@
 /* Classes for the Title */
 .section-title {
     color: aquamarine;
-    height: 25vh;
+    /* height: 25vh; */
 }
 
 .input-name {
@@ -16,7 +16,7 @@
     background-color: darkslateblue;
     color: gold;
     font-size: larger;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
     border: solid 1px white;
     border-radius: 10px;
 }
