@@ -4,19 +4,6 @@ main {
     font-size: large;
 }
 
-#links-box {
-    margin-bottom: 0;
-}
-
-#title-box {
-    background-color: darkslateblue;
-    padding: auto;
-    margin: auto;
-    margin-bottom: 10px;
-    border: solid 1px white;
-    border-radius: 10px;
-}
-
 #display-case {
     /* background-color: purple; */
     padding: auto;
@@ -24,10 +11,32 @@ main {
 }
 
 
+#title-box{
+    background-color: darkslateblue;
+    padding: auto;
+    margin: auto;
+    margin-bottom: 10px;
+    border: solid 1px white;
+    border-radius: 10px;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 #title-holder {
     /* border: solid 2px lightskyblue; */
     /* padding: auto;
     margin: auto; */
+}
+
+#button-holder {
+    /* border: solid 1px lightgreen; */
+    /* background-color: lightgrey; */
+    text-align: center;
 }
 
 .title-button {
@@ -38,7 +47,6 @@ main {
     padding-top: -2px;
     border: lightslategray solid 5px;
     width: 15vw;
-
 }
 
 /* #edit-button, #delete-button {
@@ -51,9 +59,23 @@ main {
     width: 15vw;
 } */
 
+
+.edit-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#edit-field-div {
+    width: 100%;
+}
+
 #edit-field {
     width: 100%;
 }
+
 
 
 @media (min-width: 600px) {
@@ -66,10 +88,31 @@ main {
     }
 
     #title-box {
-        width: 40vw;
+        width: 50vw;
+    }
+
+    .title-button {
+        width: 10vw;
     }
 }
 
+@media (min-width: 1000px) {
+    body {
+        width: 75vw;
+    }
+    
+    main {
+        width: 50vw;
+    }
+
+    #title-box {
+        width: 40vw;
+    }
+
+    .title-button {
+        width: 7vw;
+    }
+}
 
 
 /* div {

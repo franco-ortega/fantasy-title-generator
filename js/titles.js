@@ -21,6 +21,9 @@ for(let i = 0; i < allTitles.length; i++) {
         titleHolder.textContent = `*${oneTitle}*`;
         // titleHolder.classList.add('fade-in-down');
 
+        const buttonHolder = document.createElement('div');
+        buttonHolder.setAttribute('id', 'button-holder');
+
         // const deleteHolder = document.createElement('div');
 
 
@@ -30,9 +33,15 @@ for(let i = 0; i < allTitles.length; i++) {
         editButton.textContent = 'Edit';
 
         editButton.addEventListener('click', () => {
+            titleHolder.classList.add('hide');
+            editButton.classList.add('hide');
+            deleteButton.classList.add('hide');
             const editBox = document.createElement('div');
+            editBox.classList.add('edit-box');
 
             //Edit Input
+            const editFieldDiv = document.createElement('div')
+            editFieldDiv.setAttribute('id', 'edit-field-div');
             const editField = document.createElement('input');
             editField.setAttribute('id', 'edit-field');
             editField.value = oneTitle;
@@ -43,6 +52,12 @@ for(let i = 0; i < allTitles.length; i++) {
             undoButton.classList.add('title-button');
             undoButton.addEventListener('click', () => {
                 editBox.remove();
+                titleHolder.classList.remove('hide');
+                editButton.classList.remove('hide');
+                deleteButton.classList.remove('hide');
+                undoButton.classList.add('hide');
+                saveButton.classList.add('hide');
+                titleBox.appendChild(buttonHolder);
             });
             
             ////Save Button
@@ -58,6 +73,14 @@ for(let i = 0; i < allTitles.length; i++) {
                 // Replace the current title (titleHolder.textContent / oneTitle) with the edited title in the input field.
                 setTitles(TITLES,allTitles);
 
+                editBox.remove();
+                titleHolder.classList.remove('hide');
+                editButton.classList.remove('hide');
+                deleteButton.classList.remove('hide');
+                undoButton.classList.add('hide');
+                saveButton.classList.add('hide');
+                titleBox.appendChild(buttonHolder);
+
 
 
                 // const currentTitles = getTitles(TITLES);
@@ -70,8 +93,9 @@ for(let i = 0; i < allTitles.length; i++) {
 
 
 
-
-            editBox.append(editField, undoButton, saveButton)
+            editFieldDiv.appendChild(editField);
+            buttonHolder.append(undoButton, saveButton);
+            editBox.append(editFieldDiv, buttonHolder);
 
             titleBox.appendChild(editBox);
         })
@@ -84,7 +108,8 @@ for(let i = 0; i < allTitles.length; i++) {
         const deleteButton = deleteTitle(TITLES, titleBox, oneTitle);
 
 
-        titleBox.append(titleHolder, editButton, deleteButton);
+        buttonHolder.append(editButton, deleteButton);
+        titleBox.append(titleHolder, buttonHolder);
         displayCase.appendChild(titleBox);
     }, 500 * i);
 
