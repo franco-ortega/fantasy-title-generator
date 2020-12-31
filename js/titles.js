@@ -37,11 +37,16 @@ for(let i = 0; i < allTitles.length; i++) {
             editField.value = oneTitle;
 
             //Edit Buttons; Buttons take in one string as an arugement
+            //// Undo Button
             const undoButton = createButton('Undo');
             undoButton.classList.add('title-button');
+            undoButton.addEventListener('click', () => {
+                editBox.remove();
+            })
+            
+            ////Save Button
             const saveButton = createButton('Save');
             saveButton.classList.add('title-button');
-
 
 
 
