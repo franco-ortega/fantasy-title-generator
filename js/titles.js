@@ -1,4 +1,4 @@
-import { getTitles, setTitles } from './utils.js';
+import { getTitles, deleteTitle, createButton } from './utils.js';
 import { TITLES } from './constants.js';
 
 const displayCase = document.getElementById('display-case');
@@ -21,19 +21,45 @@ for(let i = 0; i < allTitles.length; i++) {
         // titleHolder.classList.add('fade-in-down');
 
         // const deleteHolder = document.createElement('div');
-        const deleteButton = document.createElement('button');
-        deleteButton.setAttribute('id', 'delete-button');
-        deleteButton.classList.add('fade-in');
-        deleteButton.textContent = 'Delete';
 
-        deleteButton.addEventListener('click', () => {
-            titleBox.remove();
-            const currentTitles = getTitles(TITLES);
-            const editedTitles = currentTitles.filter(title => title !== oneTitle);
-            setTitles(TITLES, editedTitles);
+
+        // EDIT BUTTON logics STARTS
+        const editButton = document.createElement('button');
+        editButton.classList.add('title-button');
+        editButton.textContent = 'Edit';
+
+        editButton.addEventListener('click', () => {
+            const editBox = document.createElement('div');
+
+            //Edit Input
+            const editField = document.createElement('input');
+            editField.setAttribute('id', 'edit-field');
+            editField.value = oneTitle;
+
+            //Edit Buttons; Buttons take in one string as an arugement
+            const undoButton = createButton('Undo');
+            undoButton.classList.add('title-button');
+            const saveButton = createButton('Save');
+            saveButton.classList.add('title-button');
+
+
+
+
+
+            editBox.append(editField, undoButton, saveButton)
+
+            titleBox.appendChild(editBox);
         })
 
-        titleBox.append(titleHolder, deleteButton);
+
+
+
+        // EDIT BUTTON logics ENDS
+
+        const deleteButton = deleteTitle(TITLES, titleBox, oneTitle);
+
+
+        titleBox.append(titleHolder, editButton, deleteButton);
         displayCase.appendChild(titleBox);
     }, 500 * i);
 

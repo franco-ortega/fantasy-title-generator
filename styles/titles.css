@@ -30,13 +30,29 @@ main {
     margin: auto; */
 }
 
-#delete-button {
+.title-button {
     background-color: silver;
     color: rebeccapurple;
     border-radius: 20px;
     margin-top: -2px;
     padding-top: -2px;
     border: lightslategray solid 5px;
+    width: 15vw;
+
+}
+
+/* #edit-button, #delete-button {
+    background-color: silver;
+    color: rebeccapurple;
+    border-radius: 20px;
+    margin-top: -2px;
+    padding-top: -2px;
+    border: lightslategray solid 5px;
+    width: 15vw;
+} */
+
+#edit-field {
+    width: 100%;
 }
 
 

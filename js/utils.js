@@ -67,3 +67,29 @@ export function saveTitle(titleToSave, key) {
     setTitles(key, localStorageTitles);
 
 };
+
+
+// titles.js utils
+// Delete Button
+export function deleteTitle(key, container, titleToDelete) {
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('title-button');
+    // deleteButton.classList.add('fade-in');
+    deleteButton.textContent = 'Delete';
+
+    deleteButton.addEventListener('click', () => {
+        container.remove();
+        const currentTitles = getTitles(key);
+        const editedTitles = currentTitles.filter(title => title !== titleToDelete);
+        setTitles(key, editedTitles);
+    })
+
+    return deleteButton;
+};
+
+//Create Button
+export function createButton(text) {
+    const button = document.createElement('button');
+    button.textContent = text;
+    return button;
+}
