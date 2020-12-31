@@ -1,10 +1,11 @@
-import { getTitles, deleteTitle, createButton } from './utils.js';
+import { getTitles, setTitles, deleteTitle, createButton } from './utils.js';
 import { TITLES } from './constants.js';
 
 const displayCase = document.getElementById('display-case');
 // displayCase.setAttribute('class', 'fade-out');
 
 const allTitles = getTitles(TITLES);
+console.log(allTitles);
 
 for(let i = 0; i < allTitles.length; i++) {
     const oneTitle = allTitles[i];
@@ -42,11 +43,30 @@ for(let i = 0; i < allTitles.length; i++) {
             undoButton.classList.add('title-button');
             undoButton.addEventListener('click', () => {
                 editBox.remove();
-            })
+            });
             
             ////Save Button
             const saveButton = createButton('Save');
             saveButton.classList.add('title-button');
+            saveButton.addEventListener('click', () => {
+                console.log('Save button clicked.')
+                titleHolder.textContent = editField.value;
+                console.log(oneTitle);
+                allTitles[i] = editField.value;
+                console.log(allTitles[i]);
+
+                // Replace the current title (titleHolder.textContent / oneTitle) with the edited title in the input field.
+                setTitles(TITLES,allTitles);
+
+
+
+                // const currentTitles = getTitles(TITLES);
+                // const editedTitles = currentTitles.filter((title) => {
+                //     if(title === oneTitle)
+                //     return console.log(oneTitle);
+                // });
+                // setTitles(TITLES, editedTitles);
+            });
 
 
 
