@@ -94,6 +94,11 @@ main {
     .title-button {
         width: 10vw;
     }
+
+    .edit-box {
+        width: 75%;
+    }
+    
 }
 
 @media (min-width: 1000px) {
@@ -112,6 +117,11 @@ main {
     .title-button {
         width: 7vw;
     }
+
+    .edit-box {
+        width: 65%;
+    }
+    
 }
 
 
