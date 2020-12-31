@@ -18,7 +18,7 @@ for(let i = 0; i < allTitles.length; i++) {
         const titleHolder = document.createElement('div');
         titleHolder.setAttribute('id', 'title-holder');
         titleHolder.classList.add('fade-in');
-        titleHolder.textContent = `*${oneTitle}*`;
+        titleHolder.textContent = `${oneTitle}`;
         // titleHolder.classList.add('fade-in-down');
 
         const buttonHolder = document.createElement('div');

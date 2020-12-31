@@ -56,7 +56,7 @@ export function createTitle(name, adjectives, nouns) {
     const secondAdjective = adjectives[1];
     const secondNoun = nouns[1];
     
-    return `${name} the ${firstAdjective} ${firstNoun} of ${secondAdjective} ${secondNoun}`;
+    return `* ${name} the ${firstAdjective} ${firstNoun} of ${secondAdjective} ${secondNoun} *`;
 };
 
 export function saveTitle(titleToSave, key) {
