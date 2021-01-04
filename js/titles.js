@@ -36,6 +36,7 @@ for(let i = 0; i < allTitles.length; i++) {
             titleHolder.classList.add('hide');
             editButton.classList.add('hide');
             deleteButton.classList.add('hide');
+            tweetButton.classList.add('hide');
             const editBox = document.createElement('div');
             editBox.classList.add('edit-box');
 
@@ -55,6 +56,7 @@ for(let i = 0; i < allTitles.length; i++) {
                 titleHolder.classList.remove('hide');
                 editButton.classList.remove('hide');
                 deleteButton.classList.remove('hide');
+                tweetButton.classList.remove('hide');
                 undoButton.classList.add('hide');
                 saveButton.classList.add('hide');
                 titleBox.appendChild(buttonHolder);
@@ -77,6 +79,7 @@ for(let i = 0; i < allTitles.length; i++) {
                 titleHolder.classList.remove('hide');
                 editButton.classList.remove('hide');
                 deleteButton.classList.remove('hide');
+                tweetButton.classList.remove('hide');
                 undoButton.classList.add('hide');
                 saveButton.classList.add('hide');
                 titleBox.appendChild(buttonHolder);
