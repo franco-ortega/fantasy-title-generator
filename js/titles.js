@@ -99,16 +99,19 @@ for(let i = 0; i < allTitles.length; i++) {
 
             titleBox.appendChild(editBox);
         })
-
-
-
-
         // EDIT BUTTON logics ENDS
 
         const deleteButton = deleteTitle(TITLES, titleBox, oneTitle);
 
+        const tweetButton = createButton('Tweet');
+        tweetButton.classList.add('title-button');
+        tweetButton.addEventListener('click', () => {
+            console.log('Tweet!!')
+            window.open(`https://twitter.com/intent/tweet?text=${oneTitle}`);
+        })
 
-        buttonHolder.append(editButton, deleteButton);
+
+        buttonHolder.append(editButton, deleteButton, tweetButton);
         titleBox.append(titleHolder, buttonHolder);
         displayCase.appendChild(titleBox);
     }, 500 * i);
