@@ -1,5 +1,3 @@
-
-
 export function setTitles(key, value) {
     const stringyTitles = JSON.stringify(value);
     localStorage.setItem(key, stringyTitles);
@@ -59,6 +57,7 @@ export function createTitle(name, adjectives, nouns) {
     return `* ${name} the ${firstAdjective} ${firstNoun} of ${secondAdjective} ${secondNoun} *`;
 };
 
+// Save new title to localStorage
 export function saveTitle(titleToSave, key) {
     const localStorageTitles = getTitles(key) || [];
 
@@ -68,28 +67,29 @@ export function saveTitle(titleToSave, key) {
 
 };
 
-
-// titles.js utils
-// Delete Button
-export function deleteTitle(key, container, titleToDelete) {
-    const deleteButton = document.createElement('button');
-    deleteButton.classList.add('title-button');
-    // deleteButton.classList.add('fade-in');
-    deleteButton.textContent = 'Delete';
-
-    deleteButton.addEventListener('click', () => {
-        container.remove();
-        const currentTitles = getTitles(key);
-        const editedTitles = currentTitles.filter(title => title !== titleToDelete);
-        setTitles(key, editedTitles);
-    })
-
-    return deleteButton;
-};
-
 //Create Button
 export function createButton(text) {
     const button = document.createElement('button');
+    button.classList.add('title-button');
     button.textContent = text;
     return button;
-}
+};
+
+
+// Delete Button
+// export function deleteTitle(key, container, titleToDelete) {
+//     const deleteButton = document.createElement('button');
+//     deleteButton.classList.add('title-button');
+//     deleteButton.textContent = 'Delete';
+
+//     deleteButton.addEventListener('click', () => {
+//         container.remove();
+//         const currentTitles = getTitles(key);
+//         const editedTitles = currentTitles.filter(title => title !== titleToDelete);
+//         setTitles(key, editedTitles);
+//     })
+
+//     return deleteButton;
+// };
+
+// const deleteButton = deleteTitle(TITLES, displayShelf, oneTitle);

@@ -1,0 +1,106 @@
+main {
+    background-color: purple;
+    color: gold;
+    font-size: large;
+}
+
+#display-case {
+    padding: auto;
+    margin: auto;
+}
+
+.display-shelf-div {
+    background-color: darkslateblue;
+    padding: auto;
+    margin: auto;
+    margin-bottom: 10px;
+    border: solid 1px white;
+    border-radius: 10px;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-div {
+    /* background-color: skyblue; */
+    width: 90%;
+}
+
+.title-field {
+    /* border: solid 1px lightskyblue; */
+}
+
+.button-holder {
+    text-align: center;
+}
+
+.title-button {
+    background-color: silver;
+    color: rebeccapurple;
+    border-radius: 20px;
+    margin-top: -2px;
+    padding-top: -2px;
+    border: lightslategray solid 5px;
+    width: 15vw;
+    outline: none;
+}
+
+.edit-box {
+    width: 100%;
+    margin-bottom: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-field {
+    width: 100%;
+}
+
+
+@media (min-width: 600px) {
+    body {
+        width: 75vw;
+    }
+    
+    main {
+        width: 50vw;
+    }
+
+    #title-box {
+        width: 50vw;
+    }
+
+    .title-button {
+        width: 10vw;
+    }
+
+    .edit-box {
+        width: 75%;
+    }
+}
+
+@media (min-width: 1000px) {
+    body {
+        width: 75vw;
+    }
+    
+    main {
+        width: 50vw;
+    }
+
+    #title-box {
+        width: 40vw;
+    }
+
+    .title-button {
+        width: 7vw;
+    }
+
+    .edit-box {
+        width: 65%;
+    }    
+}
