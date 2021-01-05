@@ -1,4 +1,4 @@
-import { getTitles, setTitles, deleteTitle, createButton } from '../../js/utils.js';
+import { getTitles, setTitles, createButton } from '../../js/utils.js';
 import { TITLES } from '../../js/constants.js';
 
 const displayCase = document.getElementById('display-case');
@@ -10,101 +10,117 @@ for(let i = 0; i < allTitles.length; i++) {
     const oneTitle = allTitles[i];
 
     setTimeout(() => {
+        // Container to hold containers for a title: title box AND edit box
+        const displayShelf = document.createElement('div');
+        displayShelf.classList.add('display-shelf-div');
+        displayShelf.classList.add('fade-in');
+
+        // Container to hold title items: title field AND title buttons
         const titleBox = document.createElement('div');
-        titleBox.setAttribute('id', 'title-box');
-        titleBox.classList.add('fade-in');
+        titleBox.classList.add('box-div');
 
-        const titleHolder = document.createElement('div');
-        titleHolder.setAttribute('id', 'title-holder');
-        titleHolder.classList.add('fade-in');
-        titleHolder.textContent = `${oneTitle}`;
+        // Container to display title
+        const titleField = document.createElement('div');
+        titleField.classList.add('title-field');
+        // titleField.classList.add('fade-in');
+        titleField.textContent = `${oneTitle}`;
 
-        const buttonHolder = document.createElement('div');
-        buttonHolder.setAttribute('id', 'button-holder');
+        // Container to hold title buttons: edit, delete, tweet
+        const titleButtons = document.createElement('div');
+        titleButtons.classList.add('button-holder');
 
-
-        // EDIT BUTTON logics STARTS
+        // Edit Button
         const editButton = document.createElement('button');
         editButton.classList.add('title-button');
         editButton.textContent = 'Edit';
-
-        editButton.addEventListener('click', () => {
-            titleHolder.classList.add('hide');
-            editButton.classList.add('hide');
-            deleteButton.classList.add('hide');
-            tweetButton.classList.add('hide');
-            const editBox = document.createElement('div');
-            editBox.classList.add('edit-box');
-
-            //Edit Input
-            const editFieldDiv = document.createElement('div')
-            editFieldDiv.setAttribute('id', 'edit-field-div');
-            const editField = document.createElement('input');
-            editField.setAttribute('id', 'edit-field');
-            editField.value = oneTitle;
-
-            //Edit Buttons; Buttons take in one string as an arugement
-            //// Undo Button
-            const undoButton = createButton('Undo');
-            undoButton.classList.add('title-button');
-            undoButton.addEventListener('click', () => {
-                editBox.remove();
-                titleHolder.classList.remove('hide');
-                editButton.classList.remove('hide');
-                deleteButton.classList.remove('hide');
-                tweetButton.classList.remove('hide');
-                undoButton.classList.add('hide');
-                saveButton.classList.add('hide');
-                titleBox.appendChild(buttonHolder);
-            });
-            
-            ////Save Button
-            const saveButton = createButton('Save');
-            saveButton.classList.add('title-button');
-            saveButton.addEventListener('click', () => {
-                console.log('Save button clicked.')
-                titleHolder.textContent = editField.value;
-                console.log(oneTitle);
-                allTitles[i] = editField.value;
-                console.log(allTitles[i]);
-
-                // Replace the current title (titleHolder.textContent / oneTitle) with the edited title in the input field.
-                setTitles(TITLES,allTitles);
-
-                editBox.remove();
-                titleHolder.classList.remove('hide');
-                editButton.classList.remove('hide');
-                deleteButton.classList.remove('hide');
-                tweetButton.classList.remove('hide');
-                undoButton.classList.add('hide');
-                saveButton.classList.add('hide');
-                titleBox.appendChild(buttonHolder);
-
-            });
-
-
-
-            editFieldDiv.appendChild(editField);
-            buttonHolder.append(undoButton, saveButton);
-            editBox.append(editFieldDiv, buttonHolder);
-
-            titleBox.appendChild(editBox);
-        })
-        // EDIT BUTTON logics ENDS
-
-        const deleteButton = deleteTitle(TITLES, titleBox, oneTitle);
-
+        
+        // Delete Button
+        // const deleteButton = deleteTitle(TITLES, displayShelf, oneTitle);
+        const deleteButton = createButton('Delete');
+        deleteButton.classList.add('title-button');
+        
+        // Tweet Button
         const tweetButton = createButton('Tweet');
         tweetButton.classList.add('title-button');
-        tweetButton.addEventListener('click', () => {
-            console.log('Tweet!!')
-            window.open(`https://twitter.com/intent/tweet?text=${oneTitle}`);
+        
+        // Append title items
+        titleButtons.append(editButton, deleteButton, tweetButton);
+        titleBox.append(titleField, titleButtons);
+
+
+        // Container to hold edit items: edit field AND edit buttons
+        const editBox = document.createElement('div');
+        editBox.classList.add('box-div');
+        editBox.classList.add('hide');
+        // editBox.classList.add('edit-box');
+
+        // Edit field
+        const editField = document.createElement('input');
+        editField.classList.add('edit-field');
+        editField.value = oneTitle;
+
+        // Container to hold edit buttons
+        const editButtons = document.createElement('div');
+        editButtons.classList.add('button-holder');
+
+        // Undo Button
+        const undoButton = createButton('Undo');
+        undoButton.classList.add('title-button');
+
+        // Save Button
+        const saveButton = createButton('Save');
+        saveButton.classList.add('title-button');
+
+        // Append edit items
+        editButtons.append(undoButton, saveButton);
+        editBox.append(editField, editButtons);
+
+
+        // Append Display Shelf and Display Case items
+        displayShelf.append(titleBox, editBox);
+        displayCase.appendChild(displayShelf);
+
+
+        // EVENT LISTENERS
+        // Edit button logic
+        editButton.addEventListener('click', () => {
+            titleBox.classList.add('hide');
+            editBox.classList.remove('hide');
+        });
+        
+        // Undo button logic
+        undoButton.addEventListener('click', () => {
+            editBox.classList.add('hide');
+            titleBox.classList.remove('hide');
+        });
+        
+        // Save button logic
+        saveButton.addEventListener('click', () => {
+            console.log('Save button clicked.');
+
+            editBox.classList.add('hide');
+            titleBox.classList.remove('hide');
+
+            titleField.textContent = editField.value;
+            allTitles[i] = editField.value;
+            console.log(allTitles[i]);
+
+            setTitles(TITLES, allTitles);
+        });
+
+        // Delete button logic
+        deleteButton.addEventListener('click', () => {
+            displayShelf.remove();
+            const currentTitles = getTitles(TITLES);
+            const editedTitles = currentTitles.filter(title => title !== oneTitle);
+            setTitles(TITLES, editedTitles);
         })
 
+        // Tweet button logic
+        tweetButton.addEventListener('click', () => {
+            window.open(`https://twitter.com/intent/tweet?text=${allTitles[i]}`);
+        });
 
-        buttonHolder.append(editButton, deleteButton, tweetButton);
-        titleBox.append(titleHolder, buttonHolder);
-        displayCase.appendChild(titleBox);
     }, 500 * i);
 
 };

@@ -25,7 +25,6 @@ titleButton.addEventListener('click', () => {
     
     const titleContainer = document.createElement('span');
     titleContainer.classList.add('span-title');
-    // titleContainer.classList.add('fade-in');
     
     const name = nameInput.value;
     const adjectives = getTwoWords(adjectiveLists);

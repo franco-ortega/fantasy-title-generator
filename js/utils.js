@@ -71,21 +71,20 @@ export function saveTitle(titleToSave, key) {
 
 // titles.js utils
 // Delete Button
-export function deleteTitle(key, container, titleToDelete) {
-    const deleteButton = document.createElement('button');
-    deleteButton.classList.add('title-button');
-    // deleteButton.classList.add('fade-in');
-    deleteButton.textContent = 'Delete';
+// export function deleteTitle(key, container, titleToDelete) {
+//     const deleteButton = document.createElement('button');
+//     deleteButton.classList.add('title-button');
+//     deleteButton.textContent = 'Delete';
 
-    deleteButton.addEventListener('click', () => {
-        container.remove();
-        const currentTitles = getTitles(key);
-        const editedTitles = currentTitles.filter(title => title !== titleToDelete);
-        setTitles(key, editedTitles);
-    })
+//     deleteButton.addEventListener('click', () => {
+//         container.remove();
+//         const currentTitles = getTitles(key);
+//         const editedTitles = currentTitles.filter(title => title !== titleToDelete);
+//         setTitles(key, editedTitles);
+//     })
 
-    return deleteButton;
-};
+//     return deleteButton;
+// };
 
 //Create Button
 export function createButton(text) {

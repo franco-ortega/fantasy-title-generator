@@ -9,7 +9,7 @@ main {
     margin: auto;
 }
 
-#title-box{
+.display-shelf-div {
     background-color: darkslateblue;
     padding: auto;
     margin: auto;
@@ -23,13 +23,16 @@ main {
     justify-content: center;
 }
 
-#title-holder {
-    /* border: solid 2px lightskyblue; */
-    /* padding: auto;
-    margin: auto; */
+.box-div {
+    background-color: skyblue;
+    width: 90%;
 }
 
-#button-holder {
+.title-field {
+    /* border: solid 1px lightskyblue; */
+}
+
+.button-holder {
     text-align: center;
 }
 
@@ -53,11 +56,7 @@ main {
     justify-content: center;
 }
 
-#edit-field-div {
-    width: 100%;
-}
-
-#edit-field {
+.edit-field {
     width: 100%;
 }
 
