@@ -1,5 +1,5 @@
 import { adjectiveLists, nounLists } from '../data/data.js';
-import { getTwoWords, createTitle, saveTitle } from '../js/utils.js'
+import { getTwoWords, createTitle, saveTitle } from './utils.js'
 import { TITLES } from './constants.js';
 
 const titleDisplayCase = document.querySelector('.title-display');

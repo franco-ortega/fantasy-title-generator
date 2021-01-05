@@ -1,8 +1,7 @@
-import { getTitles, setTitles, deleteTitle, createButton } from './utils.js';
-import { TITLES } from './constants.js';
+import { getTitles, setTitles, deleteTitle, createButton } from '../../js/utils.js';
+import { TITLES } from '../../js/constants.js';
 
 const displayCase = document.getElementById('display-case');
-// displayCase.setAttribute('class', 'fade-out');
 
 const allTitles = getTitles(TITLES);
 console.log(allTitles);
@@ -19,12 +18,9 @@ for(let i = 0; i < allTitles.length; i++) {
         titleHolder.setAttribute('id', 'title-holder');
         titleHolder.classList.add('fade-in');
         titleHolder.textContent = `${oneTitle}`;
-        // titleHolder.classList.add('fade-in-down');
 
         const buttonHolder = document.createElement('div');
         buttonHolder.setAttribute('id', 'button-holder');
-
-        // const deleteHolder = document.createElement('div');
 
 
         // EDIT BUTTON logics STARTS
@@ -84,14 +80,6 @@ for(let i = 0; i < allTitles.length; i++) {
                 saveButton.classList.add('hide');
                 titleBox.appendChild(buttonHolder);
 
-
-
-                // const currentTitles = getTitles(TITLES);
-                // const editedTitles = currentTitles.filter((title) => {
-                //     if(title === oneTitle)
-                //     return console.log(oneTitle);
-                // });
-                // setTitles(TITLES, editedTitles);
             });
 
 
@@ -120,10 +108,3 @@ for(let i = 0; i < allTitles.length; i++) {
     }, 500 * i);
 
 };
-
-// setTimeout(() => {
-//     displayCase.setAttribute('id', 'scroll');
-//     displayCase.setAttribute('class', 'fade-in');
-    
-    
-// }, 2000);
