@@ -1,5 +1,3 @@
-
-
 export function setTitles(key, value) {
     const stringyTitles = JSON.stringify(value);
     localStorage.setItem(key, stringyTitles);
@@ -59,6 +57,7 @@ export function createTitle(name, adjectives, nouns) {
     return `* ${name} the ${firstAdjective} ${firstNoun} of ${secondAdjective} ${secondNoun} *`;
 };
 
+// Save new title to localStorage
 export function saveTitle(titleToSave, key) {
     const localStorageTitles = getTitles(key) || [];
 
@@ -68,8 +67,15 @@ export function saveTitle(titleToSave, key) {
 
 };
 
+//Create Button
+export function createButton(text) {
+    const button = document.createElement('button');
+    button.classList.add('title-button');
+    button.textContent = text;
+    return button;
+};
 
-// titles.js utils
+
 // Delete Button
 // export function deleteTitle(key, container, titleToDelete) {
 //     const deleteButton = document.createElement('button');
@@ -86,9 +92,4 @@ export function saveTitle(titleToSave, key) {
 //     return deleteButton;
 // };
 
-//Create Button
-export function createButton(text) {
-    const button = document.createElement('button');
-    button.textContent = text;
-    return button;
-}
+// const deleteButton = deleteTitle(TITLES, displayShelf, oneTitle);

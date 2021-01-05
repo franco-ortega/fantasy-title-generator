@@ -4,7 +4,6 @@ import { TITLES } from '../../js/constants.js';
 const displayCase = document.getElementById('display-case');
 
 const allTitles = getTitles(TITLES);
-console.log(allTitles);
 
 for(let i = 0; i < allTitles.length; i++) {
     const oneTitle = allTitles[i];
@@ -30,18 +29,13 @@ for(let i = 0; i < allTitles.length; i++) {
         titleButtons.classList.add('button-holder');
 
         // Edit Button
-        const editButton = document.createElement('button');
-        editButton.classList.add('title-button');
-        editButton.textContent = 'Edit';
+        const editButton = createButton('Edit');
         
         // Delete Button
-        // const deleteButton = deleteTitle(TITLES, displayShelf, oneTitle);
         const deleteButton = createButton('Delete');
-        deleteButton.classList.add('title-button');
         
         // Tweet Button
         const tweetButton = createButton('Tweet');
-        tweetButton.classList.add('title-button');
         
         // Append title items
         titleButtons.append(editButton, deleteButton, tweetButton);
@@ -65,11 +59,9 @@ for(let i = 0; i < allTitles.length; i++) {
 
         // Undo Button
         const undoButton = createButton('Undo');
-        undoButton.classList.add('title-button');
 
         // Save Button
         const saveButton = createButton('Save');
-        saveButton.classList.add('title-button');
 
         // Append edit items
         editButtons.append(undoButton, saveButton);
