@@ -1,7 +1,12 @@
 * {
     box-sizing: border-box;
-    margin: 5px;
-    padding: 5px;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -9,18 +14,17 @@ body {
     color: yellowgreen;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
-    width: fit-content;
-    margin: auto;
+    padding: 20px;
 }
 
 header, section, span {
     display: flex;
-}    
+}
 
 header, section {
     flex-direction: column;
     align-items: center;
-}    
+}
 
 header {
     /* background-color: gray; */
@@ -39,8 +43,23 @@ h2 {
     color: darkcyan;
     width: 75vw;
     border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
 }
 
+a {
+    margin: 5px 10px;
+}
+
+p {
+    /* border: solid 1px black; */
+    width: fit-content;
+}
+
+.adjustment {
+    margin: 5px;
+    padding: 5px;
+}
 
 #links-div {
     background-color: orange;
@@ -51,6 +70,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 5px;
 }
 
 #links-p {
@@ -58,11 +78,8 @@ h2 {
     border: solid 1px blue;
     border-radius: 10px;
     width: 60vw;
-}
-
-p {
-    /* border: solid 1px black; */
-    width: fit-content;
+    margin: 10px;
+    padding: 5px;
 }
 
 main {
@@ -70,86 +87,36 @@ main {
     color: darkgreen;
     width: 80vw;
     margin: auto;
-    margin-top: 5px;
+    margin-top: 10px;
+    padding: 10px;
     border-radius: 10px;
 }
 
 section {
     background-color: teal;
+    color: aquamarine;
     border: solid 1px gold;
     border-radius: 10px;
     height: 40vh;
+    padding: 5px;
 }
 
 input {
     background-color: skyblue;
     color: darkolivegreen;
+    text-align: center;
+    padding: 5px;
+    margin: 1vh 1vw;
 }
 
 button {
-    /* background-color: rebeccapurple; */
-    color: rosybrown;
+    margin: 5px;
+    padding: 5px;
 }
-
-form {
-    background-color: orangered;
-}
-
-select {
-    background-color: blueviolet;
-    color: white;
-}
-
-option {
-    background-color: green;
-    color: indigo;
-}
-
-#links-desktop {
-    display: none;
-}
-
-
-@media (min-width: 600px) {
-    header {
-        width: 50vw;
-    }
-    
-    h2 {
-        width: 35vw;
-    }
-
-    #links-div {
-        width: 27vw;
-    }
-    
-    #links-p {
-        width: 25vw;
-    }
-    
-    main {
-        width: 35vw;
-    }
-    
-    /* #links-box, #links-mobile {
-        display: none;
-    } */
-    
-    
-    #links-desktop {
-        display: block;
-    }
-    
-}
-
 
 .hide {
     display: none;
 }
-
-
-
-
 
 .fade-in {
     animation: fadeIn ease 1s;
@@ -194,37 +161,25 @@ option {
     }
 }
 
-/* ol, ul {
-    list-style: none;
-}
-
-ul {
-    background-color: orange;
-    border: dashed 1px darkred;
-    width: fit-content;
-    margin: auto;
-}
-
-li {
-    background-color: silver;
-    border: solid 1px darkblue;
-} */
-
-/* .fade-in-down {
-    animation: fadeInDown ease 1s;
-    -webkit-animation: fadeInDown ease 3s;
-    -moz-animation: fadeInDown ease 1s;
-    -o-animation: fadeInDown ease 1s;
-}
-
-
-@keyframes fadeInDown {
-    0% {
-       opacity: 0;
-       transform: translateY(30px);
+/* Media Queries for desktop screens */
+@media (min-width: 600px) {
+    header {
+        width: 50vw;
     }
-    100% {
-       opacity: 1;
-       transform: translateY(0);
+    
+    h2 {
+        width: 35vw;
     }
- } */
+
+    #links-div {
+        width: 27vw;
+    }
+    
+    #links-p {
+        width: 25vw;
+    }
+    
+    main {
+        width: 35vw;
+    }    
+}

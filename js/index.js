@@ -2,9 +2,9 @@ import { adjectiveLists, nounLists } from '../data/data.js';
 import { getTwoWords, createTitle, saveTitle } from './utils.js'
 import { TITLES } from './constants.js';
 
-const titleDisplayCase = document.querySelector('.title-display');
-const titleButton = document.querySelector('.button-title');
-const nameInput = document.querySelector('.input-name');
+const titleDisplayCase = document.querySelector('#title-display');
+const titleButton = document.querySelector('#button-title');
+const nameInput = document.querySelector('input');
 
 titleButton.disabled = true;
 
@@ -25,6 +25,7 @@ titleButton.addEventListener('click', () => {
     
     const titleContainer = document.createElement('span');
     titleContainer.classList.add('span-title');
+    titleContainer.classList.add('adjustment');
     
     const name = nameInput.value;
     const adjectives = getTwoWords(adjectiveLists);

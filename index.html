@@ -16,7 +16,7 @@
 
         <div id="links-div">
             <p id="links-p">
-                <a href="/">Home</a>
+                <a href="./">Home</a>
                 -
                 <a href="titles.html">Titles</a>
                 -
@@ -27,16 +27,15 @@
 
     <main>
         <section class="section-title">
-            <p>
+            <p class="adjustment">
                 Enter your name! Earn a title!
             </p>
-            <p>
-                Name: 
-                <input type="text" placeholder="Enter name here." class="input-name" />
+            <p class="adjustment">
+                <input type="text" placeholder="Enter name here." />
                 <br />
-                <button class="button-title">Create Title</button>
+                <button id="button-title">Create Title</button>
             </p>
-            <p class="title-display hide">
+            <p id="title-display" class="hide adjustment">
                 <!-- Title displayed here on click -->
             </p>
         </section>

@@ -1,5 +1,5 @@
-import { getTitles, setTitles, createButton } from '../js/utils.js';
-import { TITLES } from '../js/constants.js';
+import { getTitles, setTitles, createButton } from './utils.js';
+import { TITLES } from './constants.js';
 
 const displayCase = document.getElementById('display-case');
 
@@ -26,7 +26,7 @@ for(let i = 0; i < allTitles.length; i++) {
 
         // Container to hold title buttons: edit, delete, tweet
         const titleButtons = document.createElement('div');
-        titleButtons.classList.add('button-holder');
+        // titleButtons.classList.add('button-holder');
 
         // Edit Button
         const editButton = createButton('Edit');
@@ -46,7 +46,6 @@ for(let i = 0; i < allTitles.length; i++) {
         const editBox = document.createElement('div');
         editBox.classList.add('box-div');
         editBox.classList.add('hide');
-        // editBox.classList.add('edit-box');
 
         // Edit field
         const editField = document.createElement('input');
@@ -55,7 +54,7 @@ for(let i = 0; i < allTitles.length; i++) {
 
         // Container to hold edit buttons
         const editButtons = document.createElement('div');
-        editButtons.classList.add('button-holder');
+        // editButtons.classList.add('button-holder');
 
         // Undo Button
         const undoButton = createButton('Undo');
