@@ -25,6 +25,7 @@ titleButton.addEventListener('click', () => {
     
     const titleContainer = document.createElement('span');
     titleContainer.classList.add('span-title');
+    titleContainer.classList.add('adjustment');
     
     const name = nameInput.value;
     const adjectives = getTwoWords(adjectiveLists);

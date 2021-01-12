@@ -1,0 +1,51 @@
+form {
+    background-color: orangered;
+}
+
+select {
+    background-color: blueviolet;
+    color: white;
+}
+
+option {
+    background-color: green;
+    color: indigo;
+}
+
+
+
+
+/* ol, ul {
+    list-style: none;
+}
+
+ul {
+    background-color: orange;
+    border: dashed 1px darkred;
+    width: fit-content;
+    margin: auto;
+}
+
+li {
+    background-color: silver;
+    border: solid 1px darkblue;
+} */
+
+/* .fade-in-down {
+    animation: fadeInDown ease 1s;
+    -webkit-animation: fadeInDown ease 3s;
+    -moz-animation: fadeInDown ease 1s;
+    -o-animation: fadeInDown ease 1s;
+}
+
+
+@keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(30px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ } */
