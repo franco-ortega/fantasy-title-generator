@@ -4,7 +4,7 @@ import { TITLES } from './constants.js';
 
 const titleDisplayCase = document.querySelector('#title-display');
 const titleButton = document.querySelector('#button-title');
-const nameInput = document.querySelector('.input-name');
+const nameInput = document.querySelector('input');
 
 titleButton.disabled = true;
 
