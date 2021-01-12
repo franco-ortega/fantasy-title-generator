@@ -1,5 +1,5 @@
-import { getTitles, setTitles, createButton } from '../js/utils.js';
-import { TITLES } from '../js/constants.js';
+import { getTitles, setTitles, createButton } from './utils.js';
+import { TITLES } from './constants.js';
 
 const displayCase = document.getElementById('display-case');
 
