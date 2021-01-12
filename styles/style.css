@@ -94,6 +94,7 @@ main {
 
 section {
     background-color: teal;
+    color: aquamarine;
     border: solid 1px gold;
     border-radius: 10px;
     height: 40vh;
@@ -105,13 +106,13 @@ input {
     color: darkolivegreen;
     text-align: center;
     padding: 5px;
+    margin: 1vh 1vw;
 }
 
 button {
     margin: 5px;
     padding: 5px;
 }
-
 
 .hide {
     display: none;
@@ -160,7 +161,7 @@ button {
     }
 }
 
-
+/* Media Queries for desktop screens */
 @media (min-width: 600px) {
     header {
         width: 50vw;
