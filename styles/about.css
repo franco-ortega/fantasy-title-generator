@@ -8,8 +8,11 @@ p {
     text-align: justify;
 }
 
-#profile-links {
+#links-container {
     display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 }
 
 .icon-and-link {
@@ -20,4 +23,19 @@ p {
 
 img {
     margin: 5px;
+}
+
+.external-links {
+    text-align: center;
+    text-decoration: underline;
+    margin: 10px;
+}
+
+/* Media Queries for desktop screens */
+@media (min-width: 600px) {
+    #links-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }    
 }
