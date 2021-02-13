@@ -27,7 +27,6 @@ header, section {
 }
 
 header {
-    /* background-color: gray; */
     color: black;
     margin: auto;
     border-radius: 10px;
@@ -52,7 +51,6 @@ a {
 }
 
 p {
-    /* border: solid 1px black; */
     width: fit-content;
 }
 
@@ -80,6 +78,7 @@ p {
     width: 60vw;
     margin: 10px;
     padding: 5px;
+    text-align: center;
 }
 
 main {
@@ -172,14 +171,14 @@ button {
     }
 
     #links-div {
-        width: 27vw;
+        width: fit-content;
     }
     
     #links-p {
-        width: 25vw;
+        width: fit-content;
     }
     
     main {
-        width: 35vw;
+        width: 55vw;
     }    
 }
