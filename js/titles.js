@@ -1,4 +1,5 @@
 import { getTitles, setTitles, createButton } from './utils.js';
+import { editTitle, undo, save, tweetTitle } from './editTitle.js';
 import { TITLES } from './constants.js';
 
 const displayCase = document.getElementById('display-case');
@@ -35,7 +36,10 @@ for(let i = 0; i < allTitles.length; i++) {
         const deleteButton = createButton('Delete');
         
         // Tweet Button
-        const tweetButton = createButton('Tweet');
+        // const tweetButton = createButton('Tweet');
+        const tweetButton = tweetTitle(oneTitle);
+
+
         
         // Append title items
         titleButtons.append(editButton, deleteButton, tweetButton);
@@ -43,28 +47,31 @@ for(let i = 0; i < allTitles.length; i++) {
 
 
         // Container to hold edit items: edit field AND edit buttons
-        const editBox = document.createElement('div');
-        editBox.classList.add('box-div');
-        editBox.classList.add('hide');
+        // const editBox = document.createElement('div');
+        // editBox.classList.add('box-div');
+        // editBox.classList.add('hide');
 
-        // Edit field
-        const editField = document.createElement('input');
-        editField.classList.add('edit-field');
-        editField.value = oneTitle;
+        // // Edit field
+        // const editField = document.createElement('input');
+        // editField.classList.add('edit-field');
+        // editField.value = oneTitle;
 
-        // Container to hold edit buttons
-        const editButtons = document.createElement('div');
-        // editButtons.classList.add('button-holder');
+        // // Container to hold edit buttons
+        // const editButtons = document.createElement('div');
+        // // editButtons.classList.add('button-holder');
 
-        // Undo Button
-        const undoButton = createButton('Undo');
+        // // Undo Button
+        // const undoButton = createButton('Undo');
 
-        // Save Button
-        const saveButton = createButton('Save');
+        // // Save Button
+        // const saveButton = createButton('Save');
 
-        // Append edit items
-        editButtons.append(undoButton, saveButton);
-        editBox.append(editField, editButtons);
+        // // Append edit items
+        // editButtons.append(undoButton, saveButton);
+        // editBox.append(editField, editButtons);
+
+        const editBox = editTitle(oneTitle, titleBox, titleField, allTitles, i);
+        console.log(editBox);
 
 
         // Append Display Shelf and Display Case items
@@ -80,12 +87,14 @@ for(let i = 0; i < allTitles.length; i++) {
         });
         
         // Undo button logic
-        undoButton.addEventListener('click', () => {
-            editBox.classList.add('hide');
-            titleBox.classList.remove('hide');
-        });
+        // const undoButton = createButton('Undo');
+        // undoButton.addEventListener('click', () => {
+        //     editBox.classList.add('hide');
+        //     titleBox.classList.remove('hide');
+        // });
         
         // Save button logic
+        const saveButton = createButton('Save');
         saveButton.addEventListener('click', () => {
             console.log('Save button clicked.');
 
@@ -108,10 +117,15 @@ for(let i = 0; i < allTitles.length; i++) {
         })
 
         // Tweet button logic
-        tweetButton.addEventListener('click', () => {
-            window.open(`https://twitter.com/intent/tweet?text=${allTitles[i]}`);
-        });
+        // tweetButton.addEventListener('click', () => {
+        //     window.open(`https://twitter.com/intent/tweet?text=${allTitles[i]}`);
+        // });
 
     }, 500 * i);
 
 };
+
+
+
+// const editBox = editTitle(oneTitle, titleBox, titleField, allTitles, i);
+// console.log(editBox);
