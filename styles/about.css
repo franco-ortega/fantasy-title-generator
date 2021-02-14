@@ -8,7 +8,7 @@ p {
     text-align: justify;
 }
 
-#links-container {
+#about-links {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -25,7 +25,7 @@ img {
     margin: 5px;
 }
 
-.external-links {
+.links-group {
     text-align: center;
     text-decoration: underline;
     margin: 10px;
@@ -33,7 +33,7 @@ img {
 
 /* Media Queries for desktop screens */
 @media (min-width: 600px) {
-    #links-container {
+    #about-links {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
