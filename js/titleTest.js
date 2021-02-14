@@ -1,6 +1,6 @@
 import { getTitles, setTitles, createButton } from './utils.js';
 import { TITLES } from './constants.js';
-import { createDisplayShelf, createTitleBox, createTitleField, createEditButton, createDeleteButton, createTweetButton, createEditBox, createEditField, updateTitles } from './titleUtils.js';
+import { createDisplayShelf, createTitleBox, createTitleField, tweetTitle, createEditBox, createEditField } from './titleUtils.js';
 
 const displayCase = document.getElementById('display-case');
 
@@ -10,27 +10,34 @@ for(let i = 0; i < allTitles.length; i++) {
     const oneTitle = allTitles[i];
 
     setTimeout(() => {
-        const displayShelf = createDisplayShelf();
 
+        // TITLE BOX
         const titleBox = createTitleBox();
         const titleField = createTitleField(oneTitle);
+        const titleButtons = document.createElement('div');
 
+        const editButton = createButton('Edit');
+        editButton.addEventListener('click', () => {
+            titleBox.classList.add('hide');
+            editBox.classList.remove('hide');
+        });
+
+        const deleteButton = createButton('Delete');
+        deleteButton.addEventListener('click', () => {
+            displayShelf.remove();
+            const currentTitles = getTitles(TITLES);
+            const editedTitles = currentTitles.filter(title => title !== oneTitle);
+            setTitles(TITLES, editedTitles);
+        });
+
+        const tweetButton = tweetTitle(oneTitle);
+        
+        titleButtons.append(editButton, deleteButton, tweetButton);
+        titleBox.append(titleField, titleButtons);
+
+        // EDIT BOX
         const editBox = createEditBox();
         const editField = createEditField(oneTitle);
-
-        // TITLE BUTTONS
-        const titleButtons = document.createElement('div');
-        const editButton = createEditButton(titleBox, editBox);
-        const deleteButton = createDeleteButton(TITLES, oneTitle, displayShelf);
-        const tweetButton = createTweetButton(oneTitle);
-
-        // const deleteButton = createButton('Delete');
-        // deleteButton.addEventListener('click', () => {
-        //     displayShelf.remove();
-        //     updateTitles(TITLES, oneTitle);
-        // });
-
-        // EDIT BUTTONS
         const editButtons = document.createElement('div');
 
         const undoButton = createButton('Undo');
@@ -53,16 +60,11 @@ for(let i = 0; i < allTitles.length; i++) {
             setTitles(TITLES, allTitles);
         });
 
-
-        // APPENDS
-        titleButtons.append(editButton, deleteButton, tweetButton);
-        titleBox.append(titleField, titleButtons);
-
         editButtons.append(undoButton, saveButton);
         editBox.append(editField, editButtons);
 
         // DISPLAY
-        
+        const displayShelf = createDisplayShelf();
         displayShelf.append(titleBox, editBox);
         displayCase.appendChild(displayShelf);
     }, 500 * i);

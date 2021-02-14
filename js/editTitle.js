@@ -58,8 +58,8 @@ export function save(editContainer, titleContainer, titleField, allTitles, editF
     const saveButton = createButton('Save');
     saveButton.addEventListener('click', () => {
     console.log('Save button clicked.');
-    console.log(allTitles[i]);
-    console.log(title);
+    // console.log(allTitles[i]);
+    // console.log(title);
 
 
     editContainer.classList.add('hide');
@@ -67,7 +67,7 @@ export function save(editContainer, titleContainer, titleField, allTitles, editF
 
     titleField.textContent = editField.value;
     allTitles[i] = editField.value;
-    console.log(TITLES);
+    // console.log(TITLES);
 
     setTitles(TITLES, allTitles);
     });
